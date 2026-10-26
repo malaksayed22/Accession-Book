@@ -1,0 +1,185 @@
+{
+  "pageTitle": "Compliance console",
+  "title": "Compliance console",
+  "description": "Regulatory status at a glance, with a plain next step for anything that needs action. Checked {when}.",
+  "status": {
+    "criticalTitle": "{count, plural, one {# critical finding needs action} other {# critical findings need action}}",
+    "criticalBody": "Start with “{finding}”. Critical findings are the ones an inspector would raise first.",
+    "warningTitle": "{count, plural, one {# warning to review} other {# warnings to review}}",
+    "warningBody": "There are no critical findings. Start with “{finding}”.",
+    "advisoryTitle": "{count, plural, one {# advisory to review} other {# advisories to review}}",
+    "advisoryBody": "Only advisories remain. Review “{finding}” when time allows.",
+    "clearTitle": "Every record-keeping check passes",
+    "clearBody": "Nothing is outstanding. Keep entering records as the work happens."
+  },
+  "stats": {
+    "checks": "Checks passing",
+    "checksValue": "{passing} of {total}",
+    "checksHint": "Each check lists the records that would fail an inspection.",
+    "critical": "Critical findings",
+    "criticalHint": "Raise first in an inspection.",
+    "warnings": "Warnings",
+    "warningsHint": "Should be fixed soon.",
+    "advisories": "Advisories",
+    "advisoriesHint": "Good practice."
+  },
+  "findings": {
+    "heading": "Findings and next steps",
+    "description": "Fix the records listed, then reload this page to check again.",
+    "noneOpen": "No open findings.",
+    "severity": {
+      "critical": "Critical",
+      "warning": "Warning",
+      "info": "Advisory"
+    },
+    "recordCount": "{count, plural, one {# record} other {# records}}",
+    "recordsHeading": "Records to fix",
+    "recordsShown": "Showing {shown} of {count}.",
+    "nextStepLabel": "Next step",
+    "regulationLabel": "Regulation",
+    "passingHeading": "Passing checks",
+    "passingSummary": "{count, plural, one {# check passes} other {# checks pass}}",
+    "passingNone": "No check passes yet.",
+    "items": {
+      "inventory-located": {
+        "title": "All inventory has a physical location",
+        "regulation": "Cannabis Regulations s.244: inventory records",
+        "description": "Every unit in inventory must be traceable to the room it is stored in. A unit without a location cannot be reconciled during an inspection.",
+        "nextStep": "Open each unit and record where it is, using a location move."
+      },
+      "cultivar-attribution": {
+        "title": "All units are attributed to a cultivar",
+        "regulation": "Cannabis Regulations s.221: record contents",
+        "description": "The cultivar is part of the required description of the cannabis held under a licence.",
+        "nextStep": "Open each unit and choose its cultivar."
+      },
+      "provenance-recorded": {
+        "title": "All units declare a lawful source",
+        "regulation": "Cannabis Regulations s.222: source of cannabis",
+        "description": "Each unit must record how it entered the site: produced on site, received from a licence holder, or imported under permit.",
+        "nextStep": "Open each unit and record its source."
+      },
+      "destruction-documented": {
+        "title": "Every destruction records a reason and a witness",
+        "regulation": "Cannabis Regulations s.230: destruction records",
+        "description": "A destruction record must state the reason and who witnessed it. A blank record is an inspection finding.",
+        "nextStep": "Contact your quality lead. A destruction record cannot be edited, so the gap must be explained in a documented note on the unit."
+      },
+      "destruction-filed-promptly": {
+        "title": "Destructions are filed promptly",
+        "regulation": "Cannabis Regulations s.230: destruction records",
+        "description": "Destruction records should be filed within {days} days of the destruction, not batched or back-filled long afterwards.",
+        "nextStep": "File destructions the same day. For the records listed, document why they were filed late."
+      },
+      "transfers-scanned": {
+        "title": "Location moves are confirmed by barcode scan",
+        "regulation": "Cannabis Regulations s.244: chain of custody",
+        "description": "A move confirmed by scanning the unit label gives a defensible chain of custody. An unconfirmed move relies on memory.",
+        "nextStep": "From now on, scan the unit label when moving it. The records listed cannot be changed."
+      },
+      "shipment-licence": {
+        "title": "Shipments record the other party’s licence number",
+        "regulation": "Cannabis Regulations s.224: transfer records",
+        "description": "Records of cannabis sent or received must identify the other licence holder, including the licence number.",
+        "nextStep": "Add the licence number to the organization, then to each shipment listed."
+      },
+      "shipments-reconciled": {
+        "title": "No shipment is left unreconciled",
+        "regulation": "Cannabis Regulations s.244: monthly reconciliation",
+        "description": "A shipment still in transit after {days} days has not been reconciled against a delivery confirmation.",
+        "nextStep": "Contact the receiving party, then record the delivery or cancel the shipment."
+      },
+      "harvest-weights": {
+        "title": "Harvested material has a recorded weight",
+        "regulation": "Cannabis Regulations s.244: quantity records",
+        "description": "Harvested cannabis must be quantified in grams, wet or dry, to appear on a CTLS monthly return.",
+        "nextStep": "Weigh each unit listed and record the weight as a measurement."
+      },
+      "experiment-attribution": {
+        "title": "Units belong to a research experiment",
+        "regulation": "Research licence: authorised activities",
+        "description": "Material held under a research licence should be attributable to the study it supports.",
+        "nextStep": "Assign each unit to its experiment when you next edit it."
+      },
+      "quality-holds": {
+        "title": "Quality holds are documented and resolved",
+        "regulation": "Good production practices: quarantine and nonconforming product",
+        "description": "A unit on hold needs a reason and an investigation. An unresolved hold freezes transfers, derivations and destruction.",
+        "nextStep": "Review each held unit in Holds & tests and release it or keep the hold with a documented reason."
+      },
+      "failed-tests": {
+        "title": "No failed lab test is outstanding",
+        "regulation": "Cannabis Regulations: quality control testing",
+        "description": "A failed result on potency or a contaminant requires a hold and a documented decision before the material can move.",
+        "nextStep": "Open Holds & tests and record the decision for each failed test."
+      },
+      "open-incidents": {
+        "title": "Quality incidents are closed out",
+        "regulation": "Good production practices: complaints, deviations and corrective action",
+        "description": "Open nonconformances must be investigated and closed with a recorded resolution.",
+        "nextStep": "Open each incident, finish the investigation and close it with a resolution."
+      }
+    }
+  },
+  "details": {
+    "noLocation": "No storage location on the current state",
+    "noCultivar": "No cultivar assigned",
+    "noSource": "No source recorded",
+    "destroyedNoReason": "Destroyed {days, plural, one {# day} other {# days}} ago with no documented reason",
+    "destroyedNoWitness": "Destroyed {days, plural, one {# day} other {# days}} ago with no documented witness",
+    "filedLate": "Filed {days, plural, one {# day} other {# days}} after the destruction",
+    "movedWithoutScan": "Moved to {location} without a scan",
+    "movedWithoutScanUnknown": "Moved to an unknown location without a scan",
+    "noLicence": "{organization}: no licence number on file",
+    "inTransitDays": "In transit for {days, plural, one {# day} other {# days}}",
+    "noWeight": "Post-harvest with no wet or dry weight",
+    "noExperiment": "Not linked to an experiment",
+    "hold": "{kind}: {reason}",
+    "testFailed": "{panel}, {analyte}: failed",
+    "incident": "{severity}: {title}"
+  },
+  "ctls": {
+    "heading": "CTLS monthly return",
+    "description": "The figures behind the monthly report to Health Canada. Closing must equal opening plus additions minus reductions.",
+    "previousHeading": "Last month: {month}",
+    "currentHeading": "This month so far: {month}",
+    "readyTitle": "Reconciles: ready to review and file",
+    "notReadyTitle": "Does not reconcile: investigate before filing",
+    "notReadyBody": "Closing differs from opening plus additions minus reductions on at least one line. Open the report to see which.",
+    "inProgress": "The month is not over: figures change until it ends.",
+    "caption": "Inventory reconciliation for {month}",
+    "category": "Category",
+    "opening": "Opening",
+    "additions": "Additions",
+    "reductions": "Reductions",
+    "closing": "Closing",
+    "state": "Reconciliation",
+    "reconciled": "Reconciled",
+    "notReconciled": "Not reconciled",
+    "activeAtClose": "Units in inventory at close",
+    "newUnits": "New units",
+    "destructions": "Destructions",
+    "shipments": "Shipments",
+    "openReport": "Open the CTLS report",
+    "lines": {
+      "plants-total": "Living plants",
+      "cultures-total": "Tissue cultures",
+      "seedlots-total": "Seed lots"
+    },
+    "adminOnly": "The full report is available to administrators."
+  },
+  "destruction": {
+    "heading": "Destruction register",
+    "description": "Each destruction needs a reason, a witness who is not the person destroying, and prompt filing.",
+    "total": "Destructions on record",
+    "last30": "In the last 30 days",
+    "latest": "Most recent destruction",
+    "latestNone": "None recorded",
+    "undocumented": "Missing a reason or witness",
+    "late": "Filed more than {days} days late",
+    "okHint": "All documented.",
+    "fixHint": "Needs an explanation.",
+    "openRegister": "Open the destruction register",
+    "openReport": "Open the report"
+  }
+}

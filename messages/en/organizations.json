@@ -1,0 +1,147 @@
+{
+  "list": {
+    "pageTitle": "Organizations",
+    "title": "Organizations",
+    "description": "{count, plural, one {# organization} other {# organizations}} matching the current filters",
+    "register": "Register organization",
+    "searchLabel": "Search organizations",
+    "searchPlaceholder": "Name, country, address or licence",
+    "countryLabel": "Country",
+    "allCountries": "All countries",
+    "relationLabel": "Relationship",
+    "caption": "Organizations",
+    "columns": {
+      "name": "Organization",
+      "relation": "Relationship",
+      "country": "Country",
+      "licence": "Licence",
+      "units": "Units supplied",
+      "inbound": "Shipments received",
+      "outbound": "Shipments sent",
+      "labResults": "Lab results"
+    },
+    "emptyTitle": "No organizations yet",
+    "emptyBody": "Register the suppliers, laboratories and partners you send material to or receive it from.",
+    "emptyBodyMember": "An administrator registers the suppliers, laboratories and partners you send material to or receive it from.",
+    "noMatchTitle": "No organizations match these filters",
+    "noMatchBody": "Try a different search, or clear the filters to see everything.",
+    "clearFilters": "Clear filters"
+  },
+  "relation": {
+    "supplier": "Supplier",
+    "recipient": "Recipient",
+    "lab": "Laboratory",
+    "supplierPlural": "Suppliers",
+    "recipientPlural": "Recipients",
+    "labPlural": "Laboratories",
+    "none": "No activity yet"
+  },
+  "new": {
+    "pageTitle": "Register organization",
+    "title": "Register organization",
+    "description": "Add a supplier, laboratory or partner to the registry. Shipments and units can then refer to it.",
+    "lockedTitle": "Only administrators can register organizations",
+    "lockedBody": "You can browse every registered organization. Ask an administrator to add a new supplier, laboratory or partner.",
+    "lockedAction": "Browse organizations"
+  },
+  "form": {
+    "name": "Organization name",
+    "nameRequired": "Enter a name of at least 2 characters.",
+    "address": "Address",
+    "country": "Country",
+    "licence": "Licence number",
+    "licenceHint": "Shown on shipment paperwork and used for CTLS.",
+    "notes": "Notes",
+    "notesHint": "Contact person, shipping preferences, compliance notes.",
+    "cancel": "Cancel",
+    "create": "Register organization",
+    "save": "Save changes",
+    "createdTitle": "{name} registered",
+    "savedTitle": "{name} saved",
+    "openExisting": "Open the existing record",
+    "editButton": "Edit",
+    "editTitle": "Edit {name}",
+    "editDescription": "Changes are recorded in the audit trail with the previous values."
+  },
+  "detail": {
+    "pageTitle": "Organization {id}",
+    "noDetails": "Organization profile",
+    "licenceLine": "Licence {licence}",
+    "stats": {
+      "unitsSupplied": "Units supplied",
+      "unitsReceived": "Units received",
+      "unitsShipped": "Units shipped",
+      "shipments": "Shipments"
+    },
+    "profile": {
+      "title": "Contact and compliance",
+      "licence": "Licence number",
+      "country": "Country",
+      "address": "Address",
+      "notes": "Notes and contacts"
+    },
+    "totals": {
+      "receivedTitle": "Material received",
+      "sentTitle": "Material sent",
+      "description": "Shipments in transit or delivered. Drafts and cancelled shipments are not counted.",
+      "none": "No material has moved yet.",
+      "labels": {
+        "seeds": "Seeds",
+        "clones": "Clones",
+        "plants": "Plants",
+        "cultures": "Cultures",
+        "wetGrams": "Flower, wet",
+        "dryGrams": "Flower, dry"
+      }
+    },
+    "shipments": {
+      "inboundTitle": "Shipments received from this organization",
+      "inboundEmptyTitle": "Nothing received yet",
+      "inboundEmptyBody": "Receipts from this organization appear here once they are recorded.",
+      "outboundTitle": "Shipments sent to this organization",
+      "outboundEmptyTitle": "Nothing sent yet",
+      "outboundEmptyBody": "Shipments to this organization appear here once they are recorded.",
+      "columns": {
+        "reference": "Reference",
+        "status": "Status",
+        "date": "Date",
+        "lines": "Lines",
+        "recordedBy": "Recorded by"
+      }
+    },
+    "units": {
+      "title": "Units supplied by this organization",
+      "columns": {
+        "name": "Unit",
+        "type": "Type",
+        "cultivar": "Cultivar",
+        "experiment": "Experiment"
+      },
+      "emptyTitle": "No units supplied",
+      "emptyBody": "Units registered with this organization as their provider appear here."
+    },
+    "tests": {
+      "title": "Tests received",
+      "columns": {
+        "unit": "Unit",
+        "test": "Test",
+        "value": "Result",
+        "verdict": "Verdict",
+        "relation": "Why it is listed",
+        "date": "Tested"
+      },
+      "relation": {
+        "performed": "Performed by this laboratory",
+        "supplied": "On material it supplied"
+      },
+      "emptyTitle": "No lab results",
+      "emptyBody": "Results performed by this laboratory, or recorded on units it supplied, appear here."
+    },
+    "activity": {
+      "title": "Profile activity",
+      "description": "The latest changes to this record, from the audit trail.",
+      "none": "No changes have been recorded.",
+      "by": "by {name}"
+    }
+  }
+}

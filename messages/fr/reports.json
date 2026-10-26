@@ -1,0 +1,317 @@
+{
+  "pageTitle": "Rapports",
+  "title": "Rapports",
+  "description": "Déclarations réglementaires et rapports opérationnels à lire à l’écran, à imprimer ou à télécharger en CSV.",
+  "back": "Tous les rapports",
+  "open": "Ouvrir le rapport",
+  "categories": {
+    "regulatory": "Réglementaire",
+    "inventory": "Inventaire",
+    "compliance": "Chaîne de possession",
+    "operations": "Opérations",
+    "audit": "Audit"
+  },
+  "catalog": {
+    "ctls-monthly": {
+      "title": "Sommaire mensuel de l’inventaire CTLS",
+      "description": "Le rapprochement mensuel pour Santé Canada : plantes, cultures, lots de semences et matériel récolté, avec les soldes d’ouverture, les ajouts, les réductions et les soldes de clôture."
+    },
+    "destruction-register": {
+      "title": "Registre des destructions",
+      "description": "Chaque destruction avec l’unité, l’expérience, le cultivar, la date, le motif et le témoin, prête pour un inspecteur."
+    },
+    "inventory-snapshot": {
+      "title": "Aperçu de l’inventaire",
+      "description": "Tout ce qui est en inventaire en ce moment, regroupé par type, stade de croissance, emplacement et cultivar, avec les poids et les nombres de semences."
+    },
+    "state-at-date": {
+      "title": "État de l’inventaire à une date",
+      "description": "Ce que le laboratoire détenait à la fin d’une journée choisie, reconstitué à partir de la date d’effet de chaque événement."
+    },
+    "inventory-movement": {
+      "title": "Registre des mouvements d’inventaire",
+      "description": "Les ajouts (enregistrements, dérivations, réceptions) et les réductions (destructions, expéditions) sur une période, avec tous les autres changements."
+    },
+    "transfer-log": {
+      "title": "Chaîne de possession : déplacements",
+      "description": "Chaque déplacement entre emplacements avec l’opérateur, l’heure et la lecture ou non du code-barres."
+    },
+    "experiment-summary": {
+      "title": "Sommaire des expériences",
+      "description": "Pour chaque expérience : unités en inventaire, détruites et expédiées, par type, avec l’équipe et le calendrier."
+    },
+    "stage-history": {
+      "title": "Historique des changements de stade",
+      "description": "Chaque changement de stade de croissance pour toutes les unités, avec la personne qui l’a consigné et son commentaire éventuel."
+    },
+    "activity-audit": {
+      "title": "Exportation du journal d’audit",
+      "description": "Le journal d’audit d’une période avec les changements champ par champ, à partager hors de l’application."
+    }
+  },
+  "locked": {
+    "title": "Les rapports sont réservés aux administrateurs",
+    "body": "Les rapports montrent les quantités en inventaire et le journal d’audit : ils restent donc réservés aux administrateurs. Le tableau de bord et la console de conformité présentent la situation actuelle à tous les membres.",
+    "action": "Aller au tableau de bord"
+  },
+  "filters": {
+    "heading": "Paramètres du rapport",
+    "year": "Année",
+    "month": "Mois",
+    "months": {
+      "1": "Janvier",
+      "2": "Février",
+      "3": "Mars",
+      "4": "Avril",
+      "5": "Mai",
+      "6": "Juin",
+      "7": "Juillet",
+      "8": "Août",
+      "9": "Septembre",
+      "10": "Octobre",
+      "11": "Novembre",
+      "12": "Décembre"
+    },
+    "licence": "Numéro de licence",
+    "licencePlaceholder": "Numéro de licence de recherche",
+    "from": "Du",
+    "to": "Au",
+    "asOf": "À la date du (fin de journée)",
+    "experiment": "Expérience",
+    "allExperiments": "Toutes les expériences",
+    "unitType": "Type d’unité",
+    "allTypes": "Tous les types",
+    "location": "Emplacement",
+    "allLocations": "Tous les emplacements",
+    "status": "Statut",
+    "statusOptions": {
+      "all": "Tous",
+      "active": "En cours",
+      "completed": "Terminées"
+    },
+    "entity": "Type d’enregistrement",
+    "entityOptions": {
+      "all": "Tous",
+      "unit": "Unités",
+      "experiment": "Expériences"
+    },
+    "action": "Action",
+    "actionOptions": {
+      "all": "Toutes",
+      "create": "Créations",
+      "derive": "Dérivations",
+      "stage_transition": "Changements de stade",
+      "transfer": "Déplacements",
+      "update": "Modifications",
+      "destroy": "Destructions"
+    },
+    "generate": "Générer le rapport",
+    "reset": "Réinitialiser",
+    "zoneNote": "Les dates sont des jours civils dans le fuseau horaire du laboratoire ({zone})."
+  },
+  "invalid": {
+    "title": "Certains paramètres n’étaient pas valides",
+    "body": "Le rapport n’a pas été généré. Corrigez ces paramètres puis générez-le de nouveau : {fields}.",
+    "fields": {
+      "year": "année",
+      "month": "mois",
+      "from": "du",
+      "to": "au (la date ne doit pas précéder la date de début)",
+      "asOf": "date de référence",
+      "licenseId": "numéro de licence",
+      "experimentId": "expérience",
+      "locationId": "emplacement",
+      "unitType": "type d’unité",
+      "status": "statut",
+      "entityType": "type d’enregistrement",
+      "action": "action"
+    }
+  },
+  "export": {
+    "print": "Imprimer ou enregistrer en PDF",
+    "csv": "Télécharger le CSV",
+    "note": "Les fichiers CSV conservent les noms de colonnes en anglais et les dates ISO, comme dans les gabarits réglementaires, quelle que soit la langue de lecture."
+  },
+  "display": {
+    "brandReport": "Rapport {brand}",
+    "period": "Période",
+    "licence": "Licence",
+    "generated": "Généré le",
+    "keyFigures": "Chiffres clés",
+    "noRecords": "Aucun enregistrement pour cette période.",
+    "ctls": {
+      "heading": "Rapprochement de l’inventaire",
+      "flow": "Clôture = ouverture + ajouts − réductions (+ ajustements pour les poids et les nombres).",
+      "caption": "Rapprochement de l’inventaire",
+      "category": "Catégorie",
+      "opening": "Ouverture",
+      "additions": "Ajouts",
+      "reductions": "Réductions",
+      "closing": "Clôture",
+      "adjustments": "Ajustements",
+      "unit": "Unité",
+      "notesHeading": "Comment lire cette déclaration",
+      "notes": {
+        "zone": "Les mois sont des mois civils dans le fuseau horaire du laboratoire ({zone}). Les dates sont les dates d’effet de chaque événement, et non celles de sa consignation.",
+        "opening": "Les soldes d’ouverture sont les unités actives au tout début du mois : leur dernier événement en vigueur n’est ni une expédition ni une destruction.",
+        "additions": "Les ajouts sont les enregistrements et les réceptions en vigueur durant le mois (nouvelles unités, clones et sous-cultures dérivés, réceptions externes), chacun compté une seule fois.",
+        "reductions": "Les réductions sont les expéditions et les destructions en vigueur durant le mois.",
+        "reconciled": "Équilibré : sur chaque ligne de comptage d’unités, clôture = ouverture + ajouts − réductions.",
+        "notReconciled": "NON ÉQUILIBRÉ : la clôture diffère de l’ouverture + ajouts − réductions sur au moins une ligne de comptage d’unités. Examinez l’écart avant de déposer.",
+        "adjustments": "Les lignes de semences et de poids indiquent aussi des ajustements : la variation nette due à une nouvelle mesure durant le mois. Clôture = ouverture + ajouts − réductions + ajustements.",
+        "distribution": "Les lignes végétative, floraison et autres stades montrent la répartition du nombre de plantes à la clôture ; les mouvements de plantes figurent sur la ligne du total."
+      }
+    },
+    "sections": {
+      "destruction-detail": "Détail des destructions",
+      "additions-detail": "Ajouts du mois (registres sources)",
+      "destruction-records": "Registres de destruction",
+      "by-type": "Sommaire par type de matériel",
+      "by-stage": "Sommaire par stade de croissance",
+      "by-location": "Sommaire par emplacement",
+      "by-cultivar": "Sommaire par cultivar",
+      "unit-detail": "Détail des unités",
+      "movement-ledger": "Registre des mouvements",
+      "event-summary": "Sommaire par événement",
+      "transfer-records": "Registres de déplacement",
+      "experiment-overview": "Aperçu des expériences",
+      "stage-transitions": "Changements de stade",
+      "audit-log": "Journal d’audit"
+    },
+    "sectionDescriptions": {
+      "additions-detail": "Chaque unité entrée en inventaire durant la période. Ouvrez une unité pour voir son profil à jour.",
+      "destruction-records": "La date de destruction est celle où le matériel a été détruit ; « consigné le » est la date où le registre a été saisi."
+    },
+    "columns": {
+      "date": "Date",
+      "dateTime": "Date et heure",
+      "destructionDate": "Date de destruction",
+      "unit": "Unité",
+      "type": "Type",
+      "materialType": "Type de matériel",
+      "cultivar": "Cultivar",
+      "experiment": "Expérience",
+      "notes": "Notes",
+      "comment": "Commentaire",
+      "source": "Source",
+      "location": "Emplacement",
+      "lastLocation": "Dernier emplacement",
+      "stage": "Stade",
+      "stageState": "Stade ou état",
+      "lastStage": "Dernier stade",
+      "weight": "Poids (g)",
+      "reason": "Motif de la destruction",
+      "witness": "Témoin",
+      "recordedBy": "Consigné par",
+      "filedAt": "Consigné le",
+      "count": "Nombre",
+      "wet": "Poids humide (g)",
+      "dry": "Poids sec (g)",
+      "seeds": "Semences",
+      "quantity": "Quantité ou poids",
+      "direction": "Sens",
+      "action": "Action",
+      "detail": "Détail",
+      "user": "Utilisateur",
+      "role": "Rôle",
+      "entity": "Enregistrement",
+      "summary": "Résumé",
+      "changes": "Changements de champs",
+      "fromLocation": "Emplacement d’origine",
+      "toLocation": "Emplacement de destination",
+      "fromStage": "Stade d’origine",
+      "toStage": "Stade de destination",
+      "confirmed": "Code-barres lu",
+      "operator": "Opérateur",
+      "ecode": "Code",
+      "name": "Nom",
+      "status": "Statut",
+      "start": "Début",
+      "end": "Fin",
+      "totalUnits": "Unités",
+      "active": "Actives",
+      "destroyed": "Détruites",
+      "shipped": "Expédiées",
+      "plants": "Plantes",
+      "cultures": "Cultures",
+      "seedLots": "Lots de semences",
+      "flowers": "Fleurs",
+      "team": "Équipe",
+      "subExperiments": "Sous-expériences",
+      "events": "Événements"
+    },
+    "kpis": {
+      "activeAtClose": "Unités en inventaire à la clôture",
+      "newUnits": "Nouvelles unités",
+      "destructions": "Destructions",
+      "shipments": "Expéditions",
+      "derivations": "Dérivations",
+      "externalReceipts": "Réceptions externes",
+      "reconciled": "Équilibré",
+      "totalDestructions": "Total des destructions",
+      "plantsDestroyed": "Plantes détruites",
+      "culturesDestroyed": "Cultures détruites",
+      "activeUnits": "Unités en inventaire",
+      "locations": "Emplacements",
+      "cultivars": "Cultivars",
+      "experiments": "Expériences",
+      "totalEvents": "Total des événements",
+      "additions": "Ajouts",
+      "reductions": "Réductions",
+      "stageChanges": "Changements de stade",
+      "totalTransfers": "Total des déplacements",
+      "barcodeConfirmed": "Code-barres lu",
+      "unconfirmedScans": "Sans lecture du code-barres",
+      "totalUnits": "Total des unités",
+      "activeExperiments": "Expériences en cours",
+      "transitions": "Changements",
+      "unitsAffected": "Unités touchées",
+      "toFlowering": "Passées en floraison",
+      "totalEntries": "Total des entrées",
+      "uniqueUsers": "Personnes",
+      "unitEvents": "Événements d’unités"
+    },
+    "ctlsLines": {
+      "plants-header": "Plantes vivantes",
+      "plants-veg": "Végétative",
+      "plants-flower": "Floraison",
+      "plants-other": "Autres stades (récolte, séchage, affinage, entreposage)",
+      "plants-total": "Total des plantes vivantes",
+      "cultures-header": "Cultures tissulaires",
+      "cultures-total": "Cultures actives",
+      "seeds-header": "Inventaire de semences",
+      "seedlots-total": "Lots de semences actifs",
+      "seeds-total": "Nombre total de semences",
+      "material-header": "Matériel de recherche récolté",
+      "material-wet": "Poids humide",
+      "material-dry": "Poids sec"
+    },
+    "ctlsUnits": {
+      "units": "unités",
+      "plants": "plantes",
+      "lots": "lots",
+      "seeds": "semences",
+      "grams": "grammes",
+      "g": "g"
+    },
+    "tokens": {
+      "addition": "Ajout",
+      "reduction": "Réduction",
+      "change": "Changement",
+      "registered": "Enregistrée",
+      "derived": "Dérivée",
+      "received": "Reçue",
+      "shipped": "Expédiée",
+      "destroyed": "Détruite",
+      "moved": "Déplacée",
+      "stageTransition": "Changement de stade",
+      "measured": "Mesurée",
+      "yes": "Oui",
+      "no": "Non",
+      "ongoing": "En cours",
+      "unassigned": "Non affecté",
+      "unknown": "Inconnu",
+      "noStage": "Aucun stade"
+    }
+  }
+}

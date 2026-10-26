@@ -1,0 +1,84 @@
+{
+  "list": {
+    "pageTitle": "Locations",
+    "title": "Locations",
+    "description": "{count, plural, one {# storage location} other {# storage locations}} matching the current filters",
+    "newLocation": "New location",
+    "searchLabel": "Search locations",
+    "searchPlaceholder": "Name, address or notes",
+    "statusLabel": "Status",
+    "caption": "Storage locations",
+    "columns": {
+      "name": "Location",
+      "status": "Status",
+      "units": "Units stored",
+      "capacity": "Capacity",
+      "occupancy": "Occupancy",
+      "experiments": "Experiments",
+      "actions": "Actions"
+    },
+    "noLimit": "No limit",
+    "emptyTitle": "No locations yet",
+    "emptyBody": "Add the rooms, freezers and fields where material is kept. Units are placed in a location when they are registered or moved.",
+    "emptyBodyMember": "An administrator adds the rooms, freezers and fields where material is kept. They will appear here.",
+    "noMatchTitle": "No locations match these filters",
+    "noMatchBody": "Try a different search, or clear the filters to see everything.",
+    "clearFilters": "Clear filters"
+  },
+  "status": {
+    "active": "Active",
+    "retired": "Retired"
+  },
+  "stats": {
+    "active": "Active locations",
+    "unitsStored": "Units stored",
+    "atCapacity": "Full or over capacity",
+    "atCapacityHint": "Locations with a limit that is reached",
+    "retired": "Retired locations"
+  },
+  "occupancy": {
+    "label": "Occupancy of {name}",
+    "summary": "{units, number} of {capacity, number} units ({ratio, number, percent})",
+    "unlimited": "{units, plural, one {# unit} other {# units}}, no limit set",
+    "level": {
+      "near": "Nearly full",
+      "full": "Full",
+      "over": "Over capacity"
+    }
+  },
+  "form": {
+    "createTitle": "New location",
+    "createDescription": "A room, freezer, field or other place where units are stored.",
+    "editTitle": "Edit {name}",
+    "editDescription": "Changes are recorded in the audit trail with the previous values.",
+    "name": "Name",
+    "nameRequired": "Enter a name of at least 2 characters.",
+    "address": "Address or position",
+    "addressHint": "Optional. Building, room or shelf.",
+    "capacity": "Capacity (units)",
+    "capacityHint": "Optional. Leave empty when there is no limit. Registering or moving units beyond it is refused.",
+    "capacityInvalid": "Enter a whole number from 1 to 1,000,000, or leave it empty.",
+    "comment": "Notes",
+    "cancel": "Cancel",
+    "save": "Save changes",
+    "create": "Create location",
+    "savedTitle": "{name} saved",
+    "createdTitle": "{name} created"
+  },
+  "actions": {
+    "menu": "Actions for {name}",
+    "edit": "Edit",
+    "retire": "Retire",
+    "retireBlocked": "Retire ({units, plural, one {# unit} other {# units}} still stored)",
+    "reactivate": "Reactivate",
+    "retireTitle": "Retire {name}?",
+    "retireBody": "No new units can be placed here once it is retired. Past records keep pointing at it. You can reactivate it later.",
+    "retireConfirm": "Retire location",
+    "reasonHint": "Why is it being retired? At least 10 characters. The reason is kept in the audit trail.",
+    "retiredTitle": "{name} retired",
+    "reactivateTitle": "Reactivate {name}?",
+    "reactivateBody": "Units can be placed in this location again.",
+    "reactivateConfirm": "Reactivate location",
+    "reactivatedTitle": "{name} reactivated"
+  }
+}

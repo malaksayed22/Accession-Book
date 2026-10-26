@@ -1,0 +1,150 @@
+{
+  "pageTitle": "Dashboard",
+  "title": "Dashboard",
+  "description": "What needs attention in the laboratory today, and the next step to take.",
+  "nextStep": {
+    "heading": "Next best step",
+    "open": "Open",
+    "allClearTitle": "Nothing needs attention right now",
+    "allClearBody": "No units on hold, no failed or inconclusive tests, no open incidents, nothing in transit and no experiment close to its end date.",
+    "failedTests": {
+      "title": "Review {count, plural, one {# failed lab test} other {# failed lab tests}}",
+      "why": "A failed result places its unit on hold. Record the decision before the material moves."
+    },
+    "onHold": {
+      "title": "Review {count, plural, one {# unit on hold} other {# units on hold}}",
+      "why": "Held units cannot be moved, derived, shipped or destroyed until a quality decision releases them."
+    },
+    "openIncidents": {
+      "title": "Close out {count, plural, one {# open incident} other {# open incidents}}",
+      "why": "Open incidents need an investigation and a recorded resolution."
+    },
+    "overdueExperiments": {
+      "title": "Close out {count, plural, one {# experiment past its end date} other {# experiments past their end date}}",
+      "why": "These experiments have ended but still hold material in inventory. Ship it, destroy it or extend the experiment."
+    },
+    "inconclusiveTests": {
+      "title": "Resolve {count, plural, one {# inconclusive lab test} other {# inconclusive lab tests}}",
+      "why": "An inconclusive result is neither a pass nor a fail. Retest, or record the decision."
+    },
+    "inTransit": {
+      "title": "Follow up {count, plural, one {# shipment in transit} other {# shipments in transit}}",
+      "why": "Record the delivery once the receiving licence holder confirms it."
+    },
+    "endingSoonExperiments": {
+      "title": "Plan for {count, plural, one {# experiment ending within {days} days} other {# experiments ending within {days} days}}",
+      "why": "Decide what happens to the remaining material before each experiment ends."
+    }
+  },
+  "attention": {
+    "heading": "Needs attention",
+    "description": "Each row opens the matching list.",
+    "cards": {
+      "onHold": {
+        "label": "Units on hold",
+        "hint": "Quality hold or quarantine. Movement is blocked.",
+        "none": "Nothing on hold."
+      },
+      "failedTests": {
+        "label": "Failed lab tests",
+        "hint": "Each failure holds its unit until a decision is recorded.",
+        "none": "No failed results outstanding."
+      },
+      "inconclusiveTests": {
+        "label": "Inconclusive lab tests",
+        "hint": "Retest or record a decision.",
+        "none": "No inconclusive results."
+      },
+      "openIncidents": {
+        "label": "Open incidents",
+        "hint": "Not yet closed with a resolution.",
+        "none": "No open incidents."
+      },
+      "inTransit": {
+        "label": "Shipments in transit",
+        "hint": "Waiting for delivery to be recorded.",
+        "none": "Nothing in transit."
+      },
+      "overdueExperiments": {
+        "label": "Experiments past their end date",
+        "hint": "Ended, but still holding material.",
+        "none": "No ended experiment holds material."
+      },
+      "endingSoonExperiments": {
+        "label": "Experiments ending soon",
+        "hint": "Ending within {days} days.",
+        "none": "None ending within {days} days."
+      }
+    }
+  },
+  "experiments": {
+    "heading": "Running experiments",
+    "description": "{count, plural, one {# experiment} other {# experiments}} in progress",
+    "units": "{count, plural, one {# unit in inventory} other {# units in inventory}}",
+    "ends": "Ends {date}",
+    "noEnd": "No end date",
+    "viewAll": "All experiments",
+    "emptyTitle": "No experiments are running",
+    "emptyBody": "Start an experiment to begin registering units.",
+    "emptyAction": "Start an experiment",
+    "moreShown": "Showing the {shown} most recent."
+  },
+  "recent": {
+    "heading": "Recent activity",
+    "auditDescription": "The latest entries in the audit trail.",
+    "eventsDescription": "The latest changes to units.",
+    "auditLink": "Open the audit trail",
+    "eventsLink": "View units",
+    "by": "by {name}",
+    "at": "at {location}",
+    "emptyTitle": "Nothing recorded yet",
+    "emptyBody": "Activity appears here as soon as someone registers or changes a unit."
+  },
+  "inventory": {
+    "heading": "Inventory snapshot",
+    "description": "{count, plural, one {# unit} other {# units}} in inventory now. Bars are proportional to the number shown.",
+    "emptyTitle": "No units in inventory",
+    "emptyBody": "Units appear here once an experiment registers or receives material.",
+    "emptyAction": "Start an experiment",
+    "byType": "By type",
+    "byStage": "By stage",
+    "byLocation": "By location",
+    "share": "{percent} of inventory",
+    "noStage": "No stage recorded",
+    "noLocation": "No location recorded",
+    "otherLocations": "{locations, plural, one {# other location} other {# other locations}}",
+    "viewUnits": "View units"
+  },
+  "hero": {
+    "lead": "The lab,",
+    "accent": "today.",
+    "allClearKicker": "All clear"
+  },
+  "charts": {
+    "heading": "Overview",
+    "description": "The inventory and the lab in pictures. Every figure is also written out.",
+    "unitsCenter": "units",
+    "results": {
+      "title": "Lab results",
+      "description": "Every recorded result, by outcome.",
+      "empty": "No lab results recorded yet.",
+      "passRate": "Pass rate",
+      "hint": "{passed} of {decided} decided results passed.",
+      "none": "No decided results yet."
+    },
+    "location": {
+      "title": "Units by location",
+      "description": "Bars show how full a location is where it has a capacity.",
+      "capacityNote": "of {capacity}"
+    },
+    "activity": {
+      "title": "Activity",
+      "description": "Everything recorded in the lab over the last {days} days: unit changes, tests, shipments and incidents.",
+      "unit": "events",
+      "total": "Total",
+      "average": "Daily average",
+      "peak": "Busiest day",
+      "peakValue": "{count, plural, one {# event} other {# events}} · {date}"
+    }
+  }
+}

@@ -1,0 +1,150 @@
+{
+  "pageTitle": "Tableau de bord",
+  "title": "Tableau de bord",
+  "description": "Ce qui demande de l’attention au laboratoire aujourd’hui, et la prochaine étape à franchir.",
+  "nextStep": {
+    "heading": "Prochaine étape recommandée",
+    "open": "Ouvrir",
+    "allClearTitle": "Rien ne demande votre attention pour le moment",
+    "allClearBody": "Aucune unité en retenue, aucun essai en échec ou non concluant, aucun incident ouvert, rien en transit et aucune expérience proche de sa date de fin.",
+    "failedTests": {
+      "title": "Examiner {count, plural, one {# essai de laboratoire en échec} other {# essais de laboratoire en échec}}",
+      "why": "Un résultat en échec place son unité en retenue. Consignez la décision avant tout déplacement du matériel."
+    },
+    "onHold": {
+      "title": "Examiner {count, plural, one {# unité en retenue} other {# unités en retenue}}",
+      "why": "Une unité en retenue ne peut être ni déplacée, ni dérivée, ni expédiée, ni détruite tant qu’une décision qualité ne l’a pas libérée."
+    },
+    "openIncidents": {
+      "title": "Clore {count, plural, one {# incident ouvert} other {# incidents ouverts}}",
+      "why": "Un incident ouvert exige une enquête et une résolution consignée."
+    },
+    "overdueExperiments": {
+      "title": "Clore {count, plural, one {# expérience dont la date de fin est dépassée} other {# expériences dont la date de fin est dépassée}}",
+      "why": "Ces expériences sont terminées, mais du matériel est encore en inventaire. Expédiez-le, détruisez-le ou prolongez l’expérience."
+    },
+    "inconclusiveTests": {
+      "title": "Régler {count, plural, one {# essai de laboratoire non concluant} other {# essais de laboratoire non concluants}}",
+      "why": "Un résultat non concluant n’est ni une réussite ni un échec. Refaites l’essai ou consignez une décision."
+    },
+    "inTransit": {
+      "title": "Faire le suivi de {count, plural, one {# expédition en transit} other {# expéditions en transit}}",
+      "why": "Consignez la livraison dès que le titulaire de licence destinataire la confirme."
+    },
+    "endingSoonExperiments": {
+      "title": "Planifier pour {count, plural, one {# expérience qui se termine dans {days} jours} other {# expériences qui se terminent dans {days} jours}}",
+      "why": "Décidez du sort du matériel restant avant la fin de chaque expérience."
+    }
+  },
+  "attention": {
+    "heading": "À surveiller",
+    "description": "Chaque ligne ouvre la liste correspondante.",
+    "cards": {
+      "onHold": {
+        "label": "Unités en retenue",
+        "hint": "Retenue qualité ou quarantaine. Les déplacements sont bloqués.",
+        "none": "Aucune unité en retenue."
+      },
+      "failedTests": {
+        "label": "Essais de laboratoire en échec",
+        "hint": "Chaque échec retient son unité jusqu’à ce qu’une décision soit consignée.",
+        "none": "Aucun résultat en échec en suspens."
+      },
+      "inconclusiveTests": {
+        "label": "Essais de laboratoire non concluants",
+        "hint": "Refaire l’essai ou consigner une décision.",
+        "none": "Aucun résultat non concluant."
+      },
+      "openIncidents": {
+        "label": "Incidents ouverts",
+        "hint": "Pas encore clos avec une résolution.",
+        "none": "Aucun incident ouvert."
+      },
+      "inTransit": {
+        "label": "Expéditions en transit",
+        "hint": "En attente de l’enregistrement de la livraison.",
+        "none": "Rien en transit."
+      },
+      "overdueExperiments": {
+        "label": "Expériences dont la date de fin est dépassée",
+        "hint": "Terminées, mais du matériel est encore en inventaire.",
+        "none": "Aucune expérience terminée ne détient de matériel."
+      },
+      "endingSoonExperiments": {
+        "label": "Expériences qui se terminent bientôt",
+        "hint": "Fin prévue dans les {days} prochains jours.",
+        "none": "Aucune fin prévue dans les {days} prochains jours."
+      }
+    }
+  },
+  "experiments": {
+    "heading": "Expériences en cours",
+    "description": "{count, plural, one {# expérience en cours} other {# expériences en cours}}",
+    "units": "{count, plural, one {# unité en inventaire} other {# unités en inventaire}}",
+    "ends": "Se termine le {date}",
+    "noEnd": "Aucune date de fin",
+    "viewAll": "Toutes les expériences",
+    "emptyTitle": "Aucune expérience en cours",
+    "emptyBody": "Démarrez une expérience pour commencer à enregistrer des unités.",
+    "emptyAction": "Démarrer une expérience",
+    "moreShown": "Affichage des {shown} plus récentes."
+  },
+  "recent": {
+    "heading": "Activité récente",
+    "auditDescription": "Les dernières entrées du journal d’audit.",
+    "eventsDescription": "Les derniers changements apportés aux unités.",
+    "auditLink": "Ouvrir le journal d’audit",
+    "eventsLink": "Voir les unités",
+    "by": "par {name}",
+    "at": "à {location}",
+    "emptyTitle": "Rien d’enregistré pour l’instant",
+    "emptyBody": "L’activité apparaît ici dès que quelqu’un enregistre ou modifie une unité."
+  },
+  "inventory": {
+    "heading": "Aperçu de l’inventaire",
+    "description": "{count, plural, one {# unité en inventaire} other {# unités en inventaire}} actuellement. La longueur des barres est proportionnelle au nombre affiché.",
+    "emptyTitle": "Aucune unité en inventaire",
+    "emptyBody": "Les unités apparaissent ici dès qu’une expérience enregistre ou reçoit du matériel.",
+    "emptyAction": "Démarrer une expérience",
+    "byType": "Par type",
+    "byStage": "Par stade",
+    "byLocation": "Par emplacement",
+    "share": "{percent} de l’inventaire",
+    "noStage": "Aucun stade consigné",
+    "noLocation": "Aucun emplacement consigné",
+    "otherLocations": "{locations, plural, one {# autre emplacement} other {# autres emplacements}}",
+    "viewUnits": "Voir les unités"
+  },
+  "hero": {
+    "lead": "Le laboratoire,",
+    "accent": "aujourd’hui.",
+    "allClearKicker": "Tout est en ordre"
+  },
+  "charts": {
+    "heading": "Aperçu",
+    "description": "L’inventaire et le laboratoire en images. Chaque chiffre est aussi écrit en toutes lettres.",
+    "unitsCenter": "unités",
+    "results": {
+      "title": "Résultats d’essais",
+      "description": "Tous les résultats consignés, par issue.",
+      "empty": "Aucun résultat d’essai consigné pour l’instant.",
+      "passRate": "Conformité",
+      "hint": "{passed} résultats conformes sur {decided} tranchés.",
+      "none": "Aucun résultat tranché pour l’instant."
+    },
+    "location": {
+      "title": "Unités par emplacement",
+      "description": "Les barres montrent le taux de remplissage lorsqu’un emplacement a une capacité.",
+      "capacityNote": "sur {capacity}"
+    },
+    "activity": {
+      "title": "Activité",
+      "description": "Tout ce qui a été consigné au laboratoire au cours des {days} derniers jours : changements d’unités, essais, expéditions et incidents.",
+      "unit": "événements",
+      "total": "Total",
+      "average": "Moyenne par jour",
+      "peak": "Journée la plus chargée",
+      "peakValue": "{count, plural, one {# événement} other {# événements}} · {date}"
+    }
+  }
+}

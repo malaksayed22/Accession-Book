@@ -1,0 +1,50 @@
+{
+  "close": "Fermer",
+  "cancel": "Annuler",
+  "dismiss": "Masquer",
+  "loading": "Chargement…",
+  "required": "obligatoire",
+  "previous": "Précédent",
+  "next": "Suivant",
+  "tone": {
+    "neutral": "Remarque",
+    "info": "Information",
+    "success": "Succès",
+    "warning": "Avertissement",
+    "danger": "Erreur"
+  },
+  "breadcrumbs": {
+    "label": "Fil d’Ariane"
+  },
+  "sort": {
+    "ascending": "trier par ordre croissant",
+    "descending": "trier par ordre décroissant"
+  },
+  "table": {
+    "empty": "Aucun résultat.",
+    "region": "{caption} (tableau défilant)"
+  },
+  "pagination": {
+    "label": "Pagination",
+    "range": "{from, number}–{to, number} sur {total, number}",
+    "pageOf": "Page {page, number} sur {pageCount, number}",
+    "page": "Page {page, number}"
+  },
+  "filters": {
+    "label": "Filtres",
+    "clearAll": "Tout effacer"
+  },
+  "toast": {
+    "viewport": "Notifications"
+  },
+  "locked": {
+    "done": "terminé",
+    "todo": "à faire"
+  },
+  "confirm": {
+    "reasonLabel": "Motif",
+    "reasonHint": "Au moins {count, number} caractères.",
+    "typeToConfirm": "Saisissez {phrase} pour confirmer",
+    "failed": "L’action n’a pas pu être effectuée. Réessayez."
+  }
+}

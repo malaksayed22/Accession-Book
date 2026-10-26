@@ -1,0 +1,48 @@
+{
+  "codes": {
+    "VALIDATION": "Certains renseignements ne sont pas valides. Vérifiez les champs et réessayez.",
+    "UNAUTHENTICATED": "Votre session est terminée. Reconnectez-vous pour continuer.",
+    "FORBIDDEN": "Vous n’avez pas la permission d’effectuer cette action.",
+    "NOT_FOUND": "Nous n’avons pas trouvé cet enregistrement.",
+    "CONFLICT": "Cette opération entre en conflit avec un enregistrement existant.",
+    "UNIT_ON_HOLD": "Cette unité est en retenue qualité. Levez la retenue avant de la déplacer, de la dériver, de changer son stade, de l’expédier ou de la détruire.",
+    "UNIT_NOT_ACTIVE": "Cette unité a quitté l’inventaire et ne peut plus être modifiée.",
+    "RATE_LIMITED": "Trop de tentatives. Réessayez dans {minutes, plural, one {# minute} other {# minutes}}.",
+    "MFA_REQUIRED": "Saisissez votre code de vérification pour continuer.",
+    "MFA_ENROLMENT_REQUIRED": "Les comptes d’administrateur doivent configurer la vérification en deux étapes avant de poursuivre.",
+    "REAUTH_REQUIRED": "Confirmez votre mot de passe pour poursuivre cette action.",
+    "INVALID_CREDENTIALS": "Nom d’utilisateur ou mot de passe invalide.",
+    "INVALID_CODE": "Ce code n’est pas valide. Vérifiez-le et réessayez.",
+    "PASSWORD_POLICY": "Ce mot de passe n’est pas acceptable.",
+    "INCORRECT_PASSWORD": "Votre mot de passe actuel est incorrect.",
+    "INVITE_INVALID": "Ce lien d’invitation est invalide ou a expiré. Demandez-en un nouveau à un administrateur.",
+    "USERNAME_UNAVAILABLE": "Ce nom d’utilisateur n’est pas disponible.",
+    "MFA_ALREADY_ON": "La vérification en deux étapes est déjà activée. Désactivez-la avant de la reconfigurer.",
+    "MFA_NOT_ON": "La vérification en deux étapes n’est pas activée.",
+    "MFA_NO_PENDING_SETUP": "Aucune configuration de la vérification en deux étapes n’est en cours.",
+    "MFA_MANDATORY": "Les administrateurs doivent conserver la vérification en deux étapes.",
+    "INITIALS_INVALID": "Le préfixe de code doit comporter de 2 à 4 lettres.",
+    "INTERNAL": "Un problème est survenu de notre côté. Veuillez réessayer.",
+    "LOCATION_NOT_EMPTY": "Cet emplacement contient encore {units, plural, one {# unité} other {# unités}} en inventaire. Déplacez-les d’abord.",
+    "LOCATION_INACTIVE": "Il est impossible de placer de nouvelles unités dans un emplacement retiré."
+  },
+  "passwordIssues": {
+    "tooShort": "Utilisez au moins {min} caractères.",
+    "tooLong": "Utilisez au plus {max} caractères.",
+    "containsUsername": "Le mot de passe ne doit pas contenir votre nom d’utilisateur.",
+    "common": "Ce mot de passe est trop courant. Choisissez-en un plus difficile à deviner.",
+    "repetitive": "Ce mot de passe est trop répétitif. Utilisez une phrase de passe plus longue."
+  },
+  "network": "Impossible de joindre le serveur. Vérifiez votre connexion et réessayez.",
+  "unknown": "Un problème est survenu. Veuillez réessayer.",
+  "page": {
+    "notFoundTitle": "Page introuvable",
+    "notFoundBody": "La page recherchée n’existe pas ou a été déplacée.",
+    "errorTitle": "Un problème est survenu",
+    "errorBody": "La page n’a pas pu être chargée. Rien de ce que vous avez fait n’en est la cause et aucun enregistrement n’a été modifié.",
+    "errorReference": "Référence : {digest}",
+    "retry": "Réessayer",
+    "goHome": "Aller au tableau de bord",
+    "goToSignIn": "Aller à la connexion"
+  }
+}

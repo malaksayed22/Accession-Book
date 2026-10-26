@@ -1,0 +1,82 @@
+{
+  "pageTitle": "Profil",
+  "title": "Profil",
+  "subtitle": "Votre compte, vos accès et votre sécurité, au même endroit.",
+  "accessLevel": "Niveau d’accès",
+  "username": "Nom d’utilisateur",
+  "prefix": "Préfixe de code d’expérience",
+  "prefixPlaceholder": "p. ex. DUA",
+  "prefixHelp": "De 2 à 4 lettres, utilisées pour les nouveaux codes d’expérience (comme {example}1).",
+  "changePassword": "Changer le mot de passe (facultatif)",
+  "newPassword": "Nouveau mot de passe",
+  "confirmNewPassword": "Confirmer le nouveau mot de passe",
+  "passwordRules": "Au moins {min} caractères, sans votre nom d’utilisateur.",
+  "currentPassword": "Mot de passe actuel",
+  "currentPasswordPlaceholder": "Obligatoire pour enregistrer toute modification",
+  "save": "Enregistrer les modifications",
+  "saving": "Enregistrement…",
+  "saved": "Profil mis à jour",
+  "unchanged": "Aucun changement : le profil est déjà à jour",
+  "mismatch": "Les nouveaux mots de passe ne correspondent pas",
+  "needCurrent": "Saisissez votre mot de passe actuel pour enregistrer les modifications",
+  "hero": {
+    "experiments": "Expériences",
+    "lastSignIn": "Dernière connexion",
+    "memberSince": "Membre depuis",
+    "never": "Pas encore"
+  },
+  "sections": {
+    "personal": {
+      "title": "Renseignements personnels",
+      "description": "Votre nom tel que les autres membres le voient, et les lettres qui commencent les codes des expériences que vous créez."
+    },
+    "password": {
+      "title": "Mot de passe",
+      "description": "Laissez les deux champs vides pour conserver votre mot de passe actuel."
+    },
+    "confirm": {
+      "title": "Confirmez votre identité",
+      "description": "Saisissez votre mot de passe actuel pour enregistrer toute modification de cette page."
+    }
+  },
+  "account": {
+    "title": "Compte",
+    "access": "Niveau d’accès",
+    "status": "Statut",
+    "passwordChanged": "Mot de passe modifié",
+    "twoStep": "Vérification en deux étapes",
+    "on": "Activée",
+    "off": "Désactivée"
+  },
+  "experiments": {
+    "title": "Mes expériences",
+    "description": "Les expériences que vous dirigez ou auxquelles vous participez.",
+    "empty": "Vous ne participez à aucune expérience pour l’instant.",
+    "units": "{count, plural, one {# unité} other {# unités}}"
+  },
+  "activity": {
+    "title": "Votre activité récente",
+    "description": "Vos dernières entrées dans le journal d’audit.",
+    "empty": "Rien d’enregistré pour l’instant."
+  },
+  "security": {
+    "title": "Sécurité",
+    "mfaOn": "La vérification en deux étapes est activée.",
+    "mfaRequiredForRole": "Elle est obligatoire pour votre rôle et ne peut pas être désactivée.",
+    "mfaOff": "Ajoutez une deuxième étape à la connexion avec une application d’authentification.",
+    "setUp": "Configurer la vérification en deux étapes",
+    "turnOffStart": "Désactiver…",
+    "turnOff": "Désactiver la vérification en deux étapes",
+    "currentPassword": "Mot de passe actuel",
+    "code": "Code de vérification ou de récupération",
+    "sessionsTitle": "Sessions actives",
+    "thisDevice": "Cet appareil",
+    "unknownDevice": "Appareil inconnu",
+    "unknownAddress": "adresse inconnue",
+    "endSession": "Terminer",
+    "description": "Protégez votre compte avec une deuxième étape à la connexion et vérifiez où vous êtes connecté.",
+    "statusOn": "Activée",
+    "statusOff": "Désactivée",
+    "sessionsDescription": "Appareils connectés à votre compte. Mettez fin à ceux que vous ne reconnaissez pas."
+  }
+}

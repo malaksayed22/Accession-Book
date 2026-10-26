@@ -1,0 +1,151 @@
+{
+  "page": {
+    "pageTitle": "Qualité et retenues",
+    "title": "Qualité et retenues",
+    "description": "Unités en retenue ou en quarantaine, résultats de laboratoire non conformes ou non concluants, et incidents ouverts. Un résultat non conforme ou un incident critique place automatiquement l’unité en retenue.",
+    "searchLabel": "Rechercher dans les dossiers de qualité",
+    "searchPlaceholder": "Unité, motif, analyte, laboratoire ou titre d’incident",
+    "viewLabel": "Afficher",
+    "views": {
+      "overview": "Aperçu",
+      "holds": "Retenues",
+      "tests": "Résultats de laboratoire",
+      "incidents": "Incidents"
+    },
+    "stats": {
+      "holds": "Unités en retenue",
+      "holdsHint": "{count, plural, one {# en quarantaine} other {# en quarantaine}}",
+      "tests": "Résultats non conformes",
+      "testsHint": "{count, plural, one {# autre est non concluant} other {# autres sont non concluants}}",
+      "incidents": "Incidents ouverts",
+      "incidentsHint": "{count, plural, one {# est critique} other {# sont critiques}}"
+    },
+    "viewAll": "Voir les {count}",
+    "noMatchTitle": "Aucun résultat pour cette recherche",
+    "noMatchBody": "Essayez une autre recherche, ou effacez-la pour tout voir.",
+    "clearSearch": "Effacer la recherche",
+    "void": "Annuler",
+    "columns": {
+      "actions": "Actions"
+    },
+    "holds": {
+      "title": "Unités en retenue",
+      "caption": "Unités en retenue qualité ou en quarantaine",
+      "columns": {
+        "unit": "Unité",
+        "kind": "Type",
+        "reason": "Motif et origine",
+        "location": "Emplacement",
+        "placed": "Placée",
+        "age": "Durée"
+      },
+      "ageToday": "Aujourd’hui",
+      "ageDays": "{days, plural, one {# jour} other {# jours}}",
+      "release": "Lever la retenue",
+      "releaseFor": "Lever la retenue sur {name}",
+      "releaseReason": "Pourquoi peut-on la lever sans risque?",
+      "releaseTitle": "Lever la retenue sur {name}?",
+      "releaseBody": "L’unité peut de nouveau être déplacée, dérivée, expédiée et détruite. Votre motif et votre nom sont consignés. On pourrait vous demander de confirmer votre mot de passe.",
+      "released": "La retenue sur {name} a été levée",
+      "kindLabel": "Type de retenue",
+      "emptyTitle": "Aucune unité en retenue",
+      "emptyBody": "Une unité apparaît ici lorsqu’elle est placée en retenue ou en quarantaine, par une personne ou par un résultat non conforme."
+    },
+    "tests": {
+      "title": "Résultats de laboratoire non conformes ou non concluants",
+      "caption": "Résultats de laboratoire non conformes ou non concluants",
+      "columns": {
+        "unit": "Unité",
+        "panel": "Panel et analyte",
+        "result": "Résultat",
+        "verdict": "Verdict",
+        "lab": "Laboratoire",
+        "date": "Analysé"
+      },
+      "limits": "Limites de {min} à {max}",
+      "voidFor": "Annuler le résultat {analyte} de {name}",
+      "voidTitle": "Annuler le résultat {analyte} de {name}?",
+      "voidBody": "Le résultat est retiré avec votre motif et cesse d’être pris en compte. Il reste dans la piste d’audit. Une retenue qu’il a causée n’est pas levée automatiquement.",
+      "voided": "Le résultat de laboratoire a été annulé",
+      "verdictLabel": "Verdict",
+      "emptyTitle": "Aucun résultat non conforme ou non concluant",
+      "emptyBody": "Les résultats sont saisis depuis la page d’une unité. Seuls les résultats non conformes et non concluants figurent ici."
+    },
+    "incidents": {
+      "title": "Incidents ouverts",
+      "caption": "Incidents de qualité ouverts",
+      "columns": {
+        "title": "Incident",
+        "severity": "Gravité",
+        "status": "Statut",
+        "unit": "Lié à",
+        "opened": "Ouvert"
+      },
+      "voidFor": "Annuler l’incident {title}",
+      "voidTitle": "Annuler l’incident « {title} »?",
+      "voidBody": "L’incident est retiré avec votre motif. Il reste dans la piste d’audit. Cette action est irréversible.",
+      "voided": "L’incident a été annulé",
+      "severityLabel": "Gravité",
+      "emptyTitle": "Aucun incident ouvert",
+      "emptyBody": "Ouvrez un incident lorsqu’un problème touche le matériel, un processus ou un dossier."
+    }
+  },
+  "picker": {
+    "placeholder": "Une partie du nom de l’unité",
+    "search": "Rechercher",
+    "none": "Aucune unité trouvée. Vérifiez l’orthographe ou essayez une partie plus courte du nom.",
+    "found": "{count, plural, one {# unité trouvée} other {# unités trouvées}}",
+    "choose": "Choisir {name}",
+    "chooseShort": "Choisir"
+  },
+  "incidentForm": {
+    "open": "Ouvrir un incident",
+    "dialogTitle": "Ouvrir un incident de qualité",
+    "dialogDescription": "Décrivez ce qui s’est passé. Un incident critique sur une unité en inventaire place cette unité en retenue.",
+    "title": "Titre",
+    "titleRequired": "Donnez un court titre à l’incident.",
+    "severity": "Gravité",
+    "severityHint": "Critique place en retenue l’unité liée.",
+    "unit": "Unité liée (facultatif)",
+    "unitHint": "Recherchez par nom d’unité.",
+    "linked": "Lié à l’unité {name}",
+    "linkedFixed": "Cet incident est lié à l’unité {name}.",
+    "unlink": "Retirer le lien",
+    "description": "Ce qui s’est passé",
+    "descriptionHint": "Ce qui s’est passé, qui l’a constaté, et les mesures de confinement immédiates.",
+    "descriptionRequired": "Décrivez ce qui s’est passé.",
+    "submit": "Ouvrir l’incident",
+    "opened": "Incident ouvert",
+    "autoHeld": "L’unité liée a été placée automatiquement en retenue."
+  },
+  "placeHold": {
+    "open": "Placer en retenue",
+    "title": "Placer une unité en retenue",
+    "description": "Une retenue interdit de déplacer, dériver, changer de stade, expédier et détruire l’unité jusqu’à ce qu’un administrateur la lève.",
+    "unit": "Unité",
+    "unitHint": "Recherchez par nom d’unité. Les unités déjà en retenue ou sorties de l’inventaire ne sont pas listées.",
+    "unitRequired": "Choisissez l’unité à retenir.",
+    "chosen": "L’unité {name} sera placée en retenue.",
+    "change": "Changer d’unité",
+    "kind": "Type de retenue",
+    "kindHint": "La quarantaine vise une contamination ou une maladie soupçonnée.",
+    "reason": "Motif",
+    "reasonHint": "Au moins {count} caractères. Il est conservé dans la piste d’audit.",
+    "reasonShort": "Expliquez le motif en au moins {count} caractères.",
+    "cancel": "Annuler",
+    "submit": "Placer en retenue",
+    "placed": "{name} a été placée en retenue"
+  },
+  "updateIncident": {
+    "open": "Mettre à jour",
+    "ariaLabel": "Mettre à jour l’incident {title}",
+    "title": "Mettre à jour l’incident",
+    "status": "Statut",
+    "resolution": "Résolution",
+    "resolutionHint": "Obligatoire pour fermer un incident, au moins {count} caractères.",
+    "resolutionShort": "Décrivez la résolution en au moins {count} caractères.",
+    "cancel": "Annuler",
+    "submit": "Enregistrer",
+    "done": "Incident mis à jour"
+  }
+}

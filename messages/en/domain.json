@@ -1,0 +1,152 @@
+{
+  "unitType": {
+    "PLANT": "Plant",
+    "SEEDLOT": "Seed lot",
+    "FLOWER": "Flower",
+    "CULTURE": "Culture"
+  },
+  "unitTypePlural": {
+    "PLANT": "Plants",
+    "SEEDLOT": "Seed lots",
+    "FLOWER": "Flowers",
+    "CULTURE": "Cultures"
+  },
+  "growthStage": {
+    "VEGETATIVE": "Vegetative",
+    "FLOWERING": "Flowering",
+    "HARVESTED": "Harvested",
+    "DRYING": "Drying",
+    "CURING": "Curing",
+    "STORAGE": "Storage",
+    "SEED": "Seed",
+    "CULTURE": "Culture"
+  },
+  "stateKind": {
+    "CREATED": "Created",
+    "RECEIVED": "Received",
+    "MOVED": "Moved",
+    "STAGE_CHANGED": "Stage changed",
+    "MEASURED": "Measured",
+    "SHIPPED": "Shipped",
+    "DESTROYED": "Destroyed"
+  },
+  "holdKind": {
+    "HOLD": "Hold",
+    "QUARANTINE": "Quarantine"
+  },
+  "holdOrigin": {
+    "MANUAL": "Placed manually",
+    "AUTO_TEST": "Automatic: failed test",
+    "AUTO_INCIDENT": "Automatic: incident"
+  },
+  "shipmentDirection": {
+    "INBOUND": "Inbound",
+    "OUTBOUND": "Outbound"
+  },
+  "shipmentStatus": {
+    "DRAFT": "Draft",
+    "IN_TRANSIT": "In transit",
+    "DELIVERED": "Delivered",
+    "CANCELLED": "Cancelled"
+  },
+  "materialClass": {
+    "SEED": "Seed",
+    "CLONE": "Clone",
+    "PLANT": "Plant",
+    "CULTURE": "Culture",
+    "FLOWER": "Flower",
+    "TRIM": "Trim"
+  },
+  "measure": {
+    "COUNT": "Count",
+    "WEIGHT": "Weight"
+  },
+  "moisture": {
+    "WET": "Wet",
+    "DRY": "Dry"
+  },
+  "testPanel": {
+    "POTENCY": "Potency",
+    "TERPENES": "Terpenes",
+    "PESTICIDES": "Pesticides",
+    "HEAVY_METALS": "Heavy metals",
+    "MICROBIALS": "Microbials",
+    "MYCOTOXINS": "Mycotoxins",
+    "MOISTURE": "Moisture",
+    "FOREIGN": "Foreign matter",
+    "OTHER": "Other"
+  },
+  "testVerdict": {
+    "PASS": "Pass",
+    "FAIL": "Fail",
+    "INCONCLUSIVE": "Inconclusive",
+    "RECORDED": "Recorded"
+  },
+  "incidentSeverity": {
+    "CRITICAL": "Critical",
+    "MAJOR": "Major",
+    "MINOR": "Minor"
+  },
+  "incidentStatus": {
+    "OPEN": "Open",
+    "INVESTIGATING": "Investigating",
+    "CLOSED": "Closed"
+  },
+  "activityType": {
+    "NUTRIENT": "Nutrient",
+    "FERTIGATION": "Fertigation",
+    "FOLIAR": "Foliar application",
+    "PESTICIDE": "Pesticide",
+    "BENEFICIAL_INSECTS": "Beneficial insects",
+    "SCOUTING": "Scouting",
+    "PRUNING": "Pruning",
+    "FLUSH": "Flush",
+    "GROW_MEDIA": "Grow media",
+    "METRICS": "Metrics",
+    "POTENCY": "Potency",
+    "TREATMENT": "Treatment",
+    "ENVIRONMENT": "Environment"
+  },
+  "attachmentCategory": {
+    "PHOTO": "Photo",
+    "PROTOCOL": "Protocol",
+    "QC": "Quality control",
+    "COA": "Certificate of analysis",
+    "MANIFEST": "Manifest"
+  },
+  "sourceType": {
+    "SEED": "Seed",
+    "CUTTING": "Cutting",
+    "CLONE": "Clone",
+    "SUBCULTURE": "Subculture",
+    "RECEIVED": "Received",
+    "INTERNAL": "Internal",
+    "HARVEST": "Harvest",
+    "OTHER": "Other"
+  },
+  "role": {
+    "ADMIN": "Administrator",
+    "REGULAR": "Lab member"
+  },
+  "experimentRole": {
+    "LEAD": "Lead",
+    "MEMBER": "Member"
+  },
+  "experimentStatus": {
+    "active": "Running",
+    "completed": "Completed"
+  },
+  "unitStatus": {
+    "active": "In inventory",
+    "on-hold": "On hold",
+    "quarantine": "Quarantine",
+    "shipped": "Shipped",
+    "destroyed": "Destroyed"
+  },
+  "memberStatus": {
+    "active": "Active",
+    "invited": "Invited",
+    "deactivated": "Deactivated"
+  },
+  "empty": "—"
+}

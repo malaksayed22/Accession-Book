@@ -1,0 +1,141 @@
+{
+  "list": {
+    "pageTitle": "Cultivars",
+    "title": "Bibliothèque génétique",
+    "description": "{count, plural, one {# cultivar correspond} other {# cultivars correspondent}} aux filtres actuels",
+    "searchLabel": "Rechercher des cultivars",
+    "searchPlaceholder": "Nom, code, nom commun, catégorie ou notes",
+    "sortLabel": "Trier par",
+    "sortOptions": {
+      "name_asc": "Nom, de A à Z",
+      "name_desc": "Nom, de Z à A",
+      "units_desc": "Plus d’unités",
+      "units_asc": "Moins d’unités",
+      "thc_desc": "THC cible le plus élevé",
+      "thc_asc": "THC cible le plus bas",
+      "updated_desc": "Modifiés récemment",
+      "updated_asc": "Modifiés il y a le plus longtemps"
+    },
+    "usageLabel": "Utilisation",
+    "usageOptions": {
+      "used": "Avec des unités",
+      "unused": "Pas encore utilisés"
+    },
+    "viewLabel": "Affichage",
+    "viewOptions": {
+      "cards": "Cartes",
+      "table": "Tableau"
+    },
+    "caption": "Cultivars",
+    "columns": {
+      "name": "Cultivar",
+      "code": "Code",
+      "category": "Catégorie",
+      "thc": "THC cible",
+      "cbd": "CBD cible",
+      "units": "Unités en inventaire",
+      "experiments": "Expériences",
+      "hold": "Retenues"
+    },
+    "emptyTitle": "Aucun cultivar pour l’instant",
+    "emptyBody": "Ajoutez les génétiques avec lesquelles votre laboratoire travaille. Chaque unité, analyse et expédition renvoie à l’une d’elles.",
+    "emptyBodyMember": "Un administrateur ajoute les génétiques avec lesquelles votre laboratoire travaille. Elles apparaîtront ici.",
+    "noMatchTitle": "Aucun cultivar ne correspond à ces filtres",
+    "noMatchBody": "Essayez une autre recherche, ou effacez les filtres pour tout afficher.",
+    "clearFilters": "Effacer les filtres"
+  },
+  "card": {
+    "targetThc": "THC cible",
+    "targetCbd": "CBD cible",
+    "inInventory": "En inventaire",
+    "inventoryOf": "{active, number} sur {total, number}",
+    "experiments": "Expériences",
+    "onHold": "{count, plural, one {# unité en retenue} other {# unités en retenue}}",
+    "noNotes": "Aucune note au dossier."
+  },
+  "detail": {
+    "pageTitle": "Cultivar {id}",
+    "noDetails": "Profil du cultivar",
+    "viewUnits": "Voir les unités",
+    "stats": {
+      "inInventory": "Unités en inventaire",
+      "registered": "{count, plural, one {# unité enregistrée au total} other {# unités enregistrées au total}}",
+      "onHold": "Unités en retenue",
+      "experiments": "Expériences",
+      "locations": "Emplacements"
+    },
+    "profile": {
+      "title": "Profil",
+      "targetThc": "THC cible",
+      "targetCbd": "CBD cible",
+      "category": "Catégorie",
+      "updated": "Dernière mise à jour",
+      "notes": "Notes"
+    },
+    "units": {
+      "title": "Unités de ce cultivar",
+      "caption": "Unités de {name}",
+      "columns": {
+        "name": "Unité",
+        "type": "Type",
+        "experiment": "Expérience",
+        "location": "Emplacement",
+        "status": "Statut"
+      },
+      "emptyTitle": "Aucune unité pour l’instant",
+      "emptyBody": "Les unités apparaissent ici dès qu’une expérience enregistre ou reçoit ce cultivar."
+    },
+    "incidents": {
+      "title": "Incidents liés à cette génétique",
+      "total": "{count, plural, one {# incident au dossier} other {# incidents au dossier}}",
+      "columns": {
+        "title": "Incident",
+        "severity": "Gravité",
+        "status": "Statut",
+        "date": "Signalé le",
+        "unit": "Unité"
+      },
+      "emptyTitle": "Aucun incident",
+      "emptyBody": "Aucun incident de qualité n’a été déclaré pour ce cultivar."
+    },
+    "tests": {
+      "title": "Analyses récentes sur cette génétique",
+      "columns": {
+        "unit": "Unité",
+        "test": "Analyse",
+        "value": "Résultat",
+        "verdict": "Verdict",
+        "date": "Analysé le",
+        "lab": "Laboratoire"
+      },
+      "emptyTitle": "Aucune analyse de laboratoire",
+      "emptyBody": "Aucune analyse de laboratoire n’a été consignée sur une unité de ce cultivar."
+    },
+    "latest": "Affichage des {shown, number} plus récents sur {total, number}."
+  },
+  "form": {
+    "createButton": "Ajouter un cultivar",
+    "editButton": "Modifier",
+    "createTitle": "Ajouter un cultivar",
+    "createDescription": "Un cultivar rejoint la bibliothèque génétique. Les unités, analyses et expéditions y renvoient par son nom.",
+    "editTitle": "Modifier {name}",
+    "editDescription": "Les modifications sont consignées dans la piste d’audit avec les valeurs précédentes.",
+    "name": "Nom",
+    "nameRequired": "Saisissez un nom d’au moins 2 caractères.",
+    "code": "Code",
+    "codeHint": "Facultatif. Code interne ou sous licence.",
+    "category": "Catégorie",
+    "categoryHint": "Facultatif. Par exemple, à dominance indica.",
+    "commonName": "Nom commun",
+    "targetThc": "THC cible (%)",
+    "targetCbd": "CBD cible (%)",
+    "percentHint": "Facultatif. De 0 à 100.",
+    "percentInvalid": "Saisissez un nombre de 0 à 100, ou laissez vide.",
+    "comment": "Notes",
+    "cancel": "Annuler",
+    "save": "Enregistrer les modifications",
+    "create": "Ajouter le cultivar",
+    "savedTitle": "{name} enregistré",
+    "createdTitle": "{name} ajouté à la bibliothèque"
+  }
+}

@@ -1,0 +1,137 @@
+{
+  "nav": {
+    "label": "Navigation principale",
+    "sectionsLabel": "Sections : {hub}",
+    "hubs": {
+      "dashboard": {
+        "label": "Tableau de bord",
+        "hint": "Vue d’ensemble du laboratoire"
+      },
+      "inventory": {
+        "label": "Inventaire",
+        "hint": "Unités, expériences et mouvements de matières"
+      },
+      "quality": {
+        "label": "Qualité",
+        "hint": "Retenues, analyses, incidents et rappel"
+      },
+      "records": {
+        "label": "Registres",
+        "hint": "Cultivars, emplacements, partenaires et personnes"
+      },
+      "compliance": {
+        "label": "Conformité",
+        "hint": "État réglementaire, rapports et journal d’audit"
+      }
+    },
+    "tabs": {
+      "units": {
+        "label": "Unités",
+        "hint": "Tout ce qui est en inventaire"
+      },
+      "experiments": {
+        "label": "Expériences",
+        "hint": "Études et réception"
+      },
+      "materials": {
+        "label": "Matières",
+        "hint": "Expéditions et réceptions"
+      },
+      "destroyed": {
+        "label": "Détruites",
+        "hint": "Ce qui a été détruit, pourquoi et devant quel témoin"
+      },
+      "holds": {
+        "label": "Retenues et analyses",
+        "hint": "Analyses, incidents, quarantaine"
+      },
+      "recall": {
+        "label": "Traçage de rappel",
+        "hint": "Remonter et suivre la filiation"
+      },
+      "cultivars": {
+        "label": "Cultivars",
+        "hint": "Bibliothèque génétique"
+      },
+      "locations": {
+        "label": "Emplacements",
+        "hint": "Salles et capacité"
+      },
+      "organizations": {
+        "label": "Organisations",
+        "hint": "Fournisseurs, laboratoires et partenaires"
+      },
+      "members": {
+        "label": "Membres",
+        "hint": "Personnes et invitations"
+      },
+      "console": {
+        "label": "Console",
+        "hint": "État réglementaire en un coup d’œil"
+      },
+      "reports": {
+        "label": "Rapports",
+        "hint": "CTLS et registres"
+      },
+      "audit": {
+        "label": "Journal d’audit",
+        "hint": "Qui a fait quoi, et quand"
+      }
+    }
+  },
+  "sidebar": {
+    "label": "Barre latérale"
+  },
+  "topbar": {
+    "openNavigation": "Ouvrir la navigation",
+    "closeNavigation": "Fermer la navigation",
+    "mobileNavigationTitle": "Navigation",
+    "mobileNavigationDescription": "Pages et outils de l’application"
+  },
+  "palette": {
+    "open": "Rechercher ou aller à…",
+    "title": "Palette de commandes",
+    "placeholder": "Saisissez une page ou une recherche…",
+    "pages": "Pages",
+    "searchFor": "Tout rechercher pour « {query} »",
+    "noResults": "Aucun résultat pour « {query} »",
+    "hint": "↑ ↓ pour naviguer, Entrée pour ouvrir, Échap pour fermer",
+    "searching": "Recherche dans les registres…",
+    "groups": {
+      "pages": "Pages",
+      "units": "Unités",
+      "experiments": "Expériences",
+      "cultivars": "Cultivars",
+      "search": "Recherche"
+    }
+  },
+  "user": {
+    "profile": "Profil et sécurité",
+    "signOut": "Se déconnecter",
+    "signedInAs": "Connecté en tant que",
+    "roleAdmin": "Administrateur",
+    "roleMember": "Membre du laboratoire",
+    "openProfile": "Ouvrir le profil de {name}"
+  },
+  "theme": {
+    "label": "Thème de couleurs",
+    "system": "Système",
+    "light": "Clair",
+    "dark": "Sombre",
+    "switchTo": "Thème : passer à « {mode} »"
+  },
+  "locale": {
+    "label": "Langue",
+    "switchTo": "Changer la langue pour {language}"
+  },
+  "breadcrumbs": {
+    "label": "Fil d’Ariane",
+    "home": "Accueil",
+    "new": "Nouveau",
+    "details": "Détails",
+    "labels": "Étiquettes"
+  },
+  "footer": {
+    "tagline": "Les registres sont conservés au Canada."
+  }
+}

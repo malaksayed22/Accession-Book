@@ -1,0 +1,48 @@
+{
+  "codes": {
+    "VALIDATION": "Some of the information is not valid. Check the fields and try again.",
+    "UNAUTHENTICATED": "Your session has ended. Sign in again to continue.",
+    "FORBIDDEN": "You do not have permission to do that.",
+    "NOT_FOUND": "We could not find that record.",
+    "CONFLICT": "That conflicts with an existing record.",
+    "UNIT_ON_HOLD": "This unit is on quality hold. Release the hold before moving, deriving, changing stage, shipping or destroying it.",
+    "UNIT_NOT_ACTIVE": "This unit has left inventory and can no longer be changed.",
+    "RATE_LIMITED": "Too many attempts. Try again in {minutes, plural, one {# minute} other {# minutes}}.",
+    "MFA_REQUIRED": "Enter your verification code to continue.",
+    "MFA_ENROLMENT_REQUIRED": "Administrator accounts must set up two-step verification before continuing.",
+    "REAUTH_REQUIRED": "Confirm your password to continue with this action.",
+    "INVALID_CREDENTIALS": "Invalid username or password.",
+    "INVALID_CODE": "That code is not valid. Check the code and try again.",
+    "PASSWORD_POLICY": "That password is not acceptable.",
+    "INCORRECT_PASSWORD": "Your current password is incorrect.",
+    "INVITE_INVALID": "This invitation link is invalid or has expired. Ask an admin for a new one.",
+    "USERNAME_UNAVAILABLE": "That username is not available.",
+    "MFA_ALREADY_ON": "Two-step verification is already on. Turn it off before setting it up again.",
+    "MFA_NOT_ON": "Two-step verification is not on.",
+    "MFA_NO_PENDING_SETUP": "There is no two-step verification setup in progress.",
+    "MFA_MANDATORY": "Administrators must keep two-step verification on.",
+    "INITIALS_INVALID": "The code prefix must be 2 to 4 letters.",
+    "INTERNAL": "Something went wrong on our side. Please try again.",
+    "LOCATION_NOT_EMPTY": "This location still holds {units, plural, one {# unit} other {# units}} in inventory. Move them first.",
+    "LOCATION_INACTIVE": "New units cannot be placed in a retired location."
+  },
+  "passwordIssues": {
+    "tooShort": "Use at least {min} characters.",
+    "tooLong": "Use at most {max} characters.",
+    "containsUsername": "The password must not contain your username.",
+    "common": "That password is too common. Choose something harder to guess.",
+    "repetitive": "That password is too repetitive. Use a longer passphrase."
+  },
+  "network": "Could not reach the server. Check your connection and try again.",
+  "unknown": "Something went wrong. Please try again.",
+  "page": {
+    "notFoundTitle": "Page not found",
+    "notFoundBody": "The page you are looking for does not exist or has moved.",
+    "errorTitle": "Something went wrong",
+    "errorBody": "The page could not be loaded. Nothing you did caused this, and no records were changed.",
+    "errorReference": "Reference: {digest}",
+    "retry": "Try again",
+    "goHome": "Go to the dashboard",
+    "goToSignIn": "Go to sign in"
+  }
+}

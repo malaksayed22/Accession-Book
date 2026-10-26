@@ -1,0 +1,317 @@
+{
+  "pageTitle": "Reports",
+  "title": "Reports",
+  "description": "Regulatory returns and operational reports to read on screen, print or download as CSV.",
+  "back": "All reports",
+  "open": "Open report",
+  "categories": {
+    "regulatory": "Regulatory",
+    "inventory": "Inventory",
+    "compliance": "Chain of custody",
+    "operations": "Operations",
+    "audit": "Audit"
+  },
+  "catalog": {
+    "ctls-monthly": {
+      "title": "CTLS monthly inventory summary",
+      "description": "The monthly reconciliation for Health Canada: plants, cultures, seed lots and harvested material with opening, additions, reductions and closing balances."
+    },
+    "destruction-register": {
+      "title": "Destruction register",
+      "description": "Every destruction with the unit, experiment, cultivar, date, reason and witness, ready for an inspector."
+    },
+    "inventory-snapshot": {
+      "title": "Inventory snapshot",
+      "description": "Everything in inventory right now, grouped by type, growth stage, location and cultivar, with weights and seed counts."
+    },
+    "state-at-date": {
+      "title": "Inventory state at a date",
+      "description": "What the laboratory held at the end of a chosen day, rebuilt from each event’s effective date."
+    },
+    "inventory-movement": {
+      "title": "Inventory movement ledger",
+      "description": "Additions (registrations, derivations, receipts) and reductions (destructions, shipments) over a period, with every other change."
+    },
+    "transfer-log": {
+      "title": "Chain of custody: location transfers",
+      "description": "Every move between locations with the operator, the time and whether the barcode was scanned."
+    },
+    "experiment-summary": {
+      "title": "Experiment summary",
+      "description": "For each experiment: units in inventory, destroyed and shipped, by type, with the team and the timeline."
+    },
+    "stage-history": {
+      "title": "Stage transition history",
+      "description": "Every change of growth stage across all units, with who recorded it and any comment."
+    },
+    "activity-audit": {
+      "title": "Audit trail export",
+      "description": "The audit trail for a period with field-level changes, for sharing outside the application."
+    }
+  },
+  "locked": {
+    "title": "Reports are for administrators",
+    "body": "Reports show inventory quantities and the audit trail, so they stay with administrators. The dashboard and the compliance console show the live position to every member.",
+    "action": "Go to the dashboard"
+  },
+  "filters": {
+    "heading": "Report parameters",
+    "year": "Year",
+    "month": "Month",
+    "months": {
+      "1": "January",
+      "2": "February",
+      "3": "March",
+      "4": "April",
+      "5": "May",
+      "6": "June",
+      "7": "July",
+      "8": "August",
+      "9": "September",
+      "10": "October",
+      "11": "November",
+      "12": "December"
+    },
+    "licence": "Licence number",
+    "licencePlaceholder": "Research licence number",
+    "from": "From",
+    "to": "To",
+    "asOf": "As of (end of day)",
+    "experiment": "Experiment",
+    "allExperiments": "All experiments",
+    "unitType": "Unit type",
+    "allTypes": "All types",
+    "location": "Location",
+    "allLocations": "All locations",
+    "status": "Status",
+    "statusOptions": {
+      "all": "All",
+      "active": "Running",
+      "completed": "Completed"
+    },
+    "entity": "Record type",
+    "entityOptions": {
+      "all": "All",
+      "unit": "Units",
+      "experiment": "Experiments"
+    },
+    "action": "Action",
+    "actionOptions": {
+      "all": "All",
+      "create": "Created",
+      "derive": "Derived",
+      "stage_transition": "Stage changes",
+      "transfer": "Transfers",
+      "update": "Updates",
+      "destroy": "Destroyed"
+    },
+    "generate": "Generate report",
+    "reset": "Reset",
+    "zoneNote": "Dates are calendar days in the laboratory time zone ({zone})."
+  },
+  "invalid": {
+    "title": "Some parameters were not valid",
+    "body": "The report was not generated. Correct these and generate it again: {fields}.",
+    "fields": {
+      "year": "year",
+      "month": "month",
+      "from": "from",
+      "to": "to (it must not be before the start date)",
+      "asOf": "as-of date",
+      "licenseId": "licence number",
+      "experimentId": "experiment",
+      "locationId": "location",
+      "unitType": "unit type",
+      "status": "status",
+      "entityType": "record type",
+      "action": "action"
+    }
+  },
+  "export": {
+    "print": "Print or save as PDF",
+    "csv": "Download CSV",
+    "note": "CSV files keep English column names and ISO dates, as in regulatory templates, whichever language you read."
+  },
+  "display": {
+    "brandReport": "{brand} report",
+    "period": "Period",
+    "licence": "Licence",
+    "generated": "Generated",
+    "keyFigures": "Key figures",
+    "noRecords": "No records for this period.",
+    "ctls": {
+      "heading": "Inventory reconciliation",
+      "flow": "Closing = opening + additions − reductions (+ adjustments for weights and counts).",
+      "caption": "Inventory reconciliation",
+      "category": "Category",
+      "opening": "Opening",
+      "additions": "Additions",
+      "reductions": "Reductions",
+      "closing": "Closing",
+      "adjustments": "Adjustments",
+      "unit": "Unit",
+      "notesHeading": "How to read this return",
+      "notes": {
+        "zone": "Months are calendar months in the laboratory time zone ({zone}). Dates are the effective date of each event, not the date it was filed.",
+        "opening": "Opening balances are the units active at the very start of the month: their newest effective event is not a shipment or a destruction.",
+        "additions": "Additions are registrations and receipts effective in the month (new units, derived clones and subcultures, external receipts), each counted once.",
+        "reductions": "Reductions are shipments and destructions effective in the month.",
+        "reconciled": "Reconciled: on every unit-count line, closing = opening + additions − reductions.",
+        "notReconciled": "NOT RECONCILED: closing differs from opening + additions − reductions on at least one unit-count line. Investigate before filing.",
+        "adjustments": "Seed and weight lines also report adjustments: the net change from re-measurement during the month. Closing = opening + additions − reductions + adjustments.",
+        "distribution": "Vegetative, flowering and other-stage rows show how the closing plant count is distributed; plant flows are on the total row."
+      }
+    },
+    "sections": {
+      "destruction-detail": "Destruction detail",
+      "additions-detail": "Additions this month (source records)",
+      "destruction-records": "Destruction records",
+      "by-type": "Summary by material type",
+      "by-stage": "Summary by growth stage",
+      "by-location": "Summary by location",
+      "by-cultivar": "Summary by cultivar",
+      "unit-detail": "Unit detail",
+      "movement-ledger": "Movement ledger",
+      "event-summary": "Summary by event",
+      "transfer-records": "Transfer records",
+      "experiment-overview": "Experiment overview",
+      "stage-transitions": "Stage transitions",
+      "audit-log": "Audit log"
+    },
+    "sectionDescriptions": {
+      "additions-detail": "Each unit that entered inventory during the period. Open a unit to see its live profile.",
+      "destruction-records": "The destruction date is when the material was destroyed; filed at is when the record was entered."
+    },
+    "columns": {
+      "date": "Date",
+      "dateTime": "Date and time",
+      "destructionDate": "Destruction date",
+      "unit": "Unit",
+      "type": "Type",
+      "materialType": "Material type",
+      "cultivar": "Cultivar",
+      "experiment": "Experiment",
+      "notes": "Notes",
+      "comment": "Comment",
+      "source": "Source",
+      "location": "Location",
+      "lastLocation": "Last location",
+      "stage": "Stage",
+      "stageState": "Stage or state",
+      "lastStage": "Last stage",
+      "weight": "Weight (g)",
+      "reason": "Reason for destruction",
+      "witness": "Witness",
+      "recordedBy": "Recorded by",
+      "filedAt": "Filed at",
+      "count": "Count",
+      "wet": "Wet weight (g)",
+      "dry": "Dry weight (g)",
+      "seeds": "Seeds",
+      "quantity": "Quantity or weight",
+      "direction": "Direction",
+      "action": "Action",
+      "detail": "Detail",
+      "user": "User",
+      "role": "Role",
+      "entity": "Record",
+      "summary": "Summary",
+      "changes": "Field changes",
+      "fromLocation": "From location",
+      "toLocation": "To location",
+      "fromStage": "From stage",
+      "toStage": "To stage",
+      "confirmed": "Barcode confirmed",
+      "operator": "Operator",
+      "ecode": "Code",
+      "name": "Name",
+      "status": "Status",
+      "start": "Start",
+      "end": "End",
+      "totalUnits": "Units",
+      "active": "Active",
+      "destroyed": "Destroyed",
+      "shipped": "Shipped",
+      "plants": "Plants",
+      "cultures": "Cultures",
+      "seedLots": "Seed lots",
+      "flowers": "Flowers",
+      "team": "Team",
+      "subExperiments": "Sub-experiments",
+      "events": "Events"
+    },
+    "kpis": {
+      "activeAtClose": "Units in inventory at close",
+      "newUnits": "New units",
+      "destructions": "Destructions",
+      "shipments": "Shipments",
+      "derivations": "Derivations",
+      "externalReceipts": "External receipts",
+      "reconciled": "Reconciled",
+      "totalDestructions": "Total destructions",
+      "plantsDestroyed": "Plants destroyed",
+      "culturesDestroyed": "Cultures destroyed",
+      "activeUnits": "Units in inventory",
+      "locations": "Locations",
+      "cultivars": "Cultivars",
+      "experiments": "Experiments",
+      "totalEvents": "Total events",
+      "additions": "Additions",
+      "reductions": "Reductions",
+      "stageChanges": "Stage changes",
+      "totalTransfers": "Total transfers",
+      "barcodeConfirmed": "Barcode confirmed",
+      "unconfirmedScans": "Not confirmed by scan",
+      "totalUnits": "Total units",
+      "activeExperiments": "Running experiments",
+      "transitions": "Transitions",
+      "unitsAffected": "Units affected",
+      "toFlowering": "Moved to flowering",
+      "totalEntries": "Total entries",
+      "uniqueUsers": "People",
+      "unitEvents": "Unit events"
+    },
+    "ctlsLines": {
+      "plants-header": "Living plants",
+      "plants-veg": "Vegetative",
+      "plants-flower": "Flowering",
+      "plants-other": "Other stages (harvested, drying, curing, storage)",
+      "plants-total": "Total living plants",
+      "cultures-header": "Tissue cultures",
+      "cultures-total": "Active cultures",
+      "seeds-header": "Seed inventory",
+      "seedlots-total": "Active seed lots",
+      "seeds-total": "Total seed count",
+      "material-header": "Harvested research material",
+      "material-wet": "Wet weight",
+      "material-dry": "Dried weight"
+    },
+    "ctlsUnits": {
+      "units": "units",
+      "plants": "plants",
+      "lots": "lots",
+      "seeds": "seeds",
+      "grams": "grams",
+      "g": "g"
+    },
+    "tokens": {
+      "addition": "Addition",
+      "reduction": "Reduction",
+      "change": "Change",
+      "registered": "Registered",
+      "derived": "Derived",
+      "received": "Received",
+      "shipped": "Shipped",
+      "destroyed": "Destroyed",
+      "moved": "Moved",
+      "stageTransition": "Stage transition",
+      "measured": "Measured",
+      "yes": "Yes",
+      "no": "No",
+      "ongoing": "Ongoing",
+      "unassigned": "Unassigned",
+      "unknown": "Unknown",
+      "noStage": "No stage"
+    }
+  }
+}

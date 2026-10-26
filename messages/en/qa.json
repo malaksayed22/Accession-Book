@@ -1,0 +1,151 @@
+{
+  "page": {
+    "pageTitle": "Quality and holds",
+    "title": "Quality and holds",
+    "description": "Units on hold or in quarantine, failed and inconclusive lab results, and open incidents. A failed result or a critical incident places the unit on hold automatically.",
+    "searchLabel": "Search quality records",
+    "searchPlaceholder": "Unit, reason, analyte, laboratory or incident title",
+    "viewLabel": "Show",
+    "views": {
+      "overview": "Overview",
+      "holds": "Holds",
+      "tests": "Lab results",
+      "incidents": "Incidents"
+    },
+    "stats": {
+      "holds": "Units on hold",
+      "holdsHint": "{count, plural, one {# in quarantine} other {# in quarantine}}",
+      "tests": "Failed lab results",
+      "testsHint": "{count, plural, one {# more is inconclusive} other {# more are inconclusive}}",
+      "incidents": "Open incidents",
+      "incidentsHint": "{count, plural, one {# is critical} other {# are critical}}"
+    },
+    "viewAll": "View all {count}",
+    "noMatchTitle": "Nothing matches this search",
+    "noMatchBody": "Try a different search, or clear it to see everything.",
+    "clearSearch": "Clear search",
+    "void": "Void",
+    "columns": {
+      "actions": "Actions"
+    },
+    "holds": {
+      "title": "Units on hold",
+      "caption": "Units on quality hold or in quarantine",
+      "columns": {
+        "unit": "Unit",
+        "kind": "Kind",
+        "reason": "Reason and origin",
+        "location": "Location",
+        "placed": "Placed",
+        "age": "Age"
+      },
+      "ageToday": "Today",
+      "ageDays": "{days, plural, one {# day} other {# days}}",
+      "release": "Release hold",
+      "releaseFor": "Release the hold on {name}",
+      "releaseReason": "Why is it safe to release?",
+      "releaseTitle": "Release the hold on {name}?",
+      "releaseBody": "The unit can be moved, derived, shipped and destroyed again. Your reason and your name are recorded. You may be asked to confirm your password.",
+      "released": "The hold on {name} was released",
+      "kindLabel": "Kind of hold",
+      "emptyTitle": "No units are on hold",
+      "emptyBody": "A unit appears here when it is placed on hold or in quarantine, by a person or by a failed result."
+    },
+    "tests": {
+      "title": "Failed and inconclusive lab results",
+      "caption": "Failed and inconclusive lab results",
+      "columns": {
+        "unit": "Unit",
+        "panel": "Panel and analyte",
+        "result": "Result",
+        "verdict": "Verdict",
+        "lab": "Laboratory",
+        "date": "Tested"
+      },
+      "limits": "Limits {min} to {max}",
+      "voidFor": "Void the {analyte} result for {name}",
+      "voidTitle": "Void the {analyte} result for {name}?",
+      "voidBody": "The result is withdrawn with your reason and stops counting. It stays in the audit trail. A hold it caused is not released automatically.",
+      "voided": "The lab result was voided",
+      "verdictLabel": "Verdict",
+      "emptyTitle": "No failed or inconclusive results",
+      "emptyBody": "Results are recorded from a unit page. Only failed and inconclusive ones are listed here."
+    },
+    "incidents": {
+      "title": "Open incidents",
+      "caption": "Open quality incidents",
+      "columns": {
+        "title": "Incident",
+        "severity": "Severity",
+        "status": "Status",
+        "unit": "Linked to",
+        "opened": "Opened"
+      },
+      "voidFor": "Void the incident {title}",
+      "voidTitle": "Void the incident “{title}”?",
+      "voidBody": "The incident is withdrawn with your reason. It stays in the audit trail. This cannot be undone.",
+      "voided": "The incident was voided",
+      "severityLabel": "Severity",
+      "emptyTitle": "No open incidents",
+      "emptyBody": "Open an incident when something goes wrong with material, a process or a record."
+    }
+  },
+  "picker": {
+    "placeholder": "Part of a unit name",
+    "search": "Search",
+    "none": "No unit found. Check the spelling, or try a shorter part of the name.",
+    "found": "{count, plural, one {# unit found} other {# units found}}",
+    "choose": "Choose {name}",
+    "chooseShort": "Choose"
+  },
+  "incidentForm": {
+    "open": "Open an incident",
+    "dialogTitle": "Open a quality incident",
+    "dialogDescription": "Describe what happened. A critical incident on a unit in inventory places that unit on hold.",
+    "title": "Title",
+    "titleRequired": "Give the incident a short title.",
+    "severity": "Severity",
+    "severityHint": "Critical places a linked unit on hold.",
+    "unit": "Linked unit (optional)",
+    "unitHint": "Search by unit name.",
+    "linked": "Linked to unit {name}",
+    "linkedFixed": "This incident is linked to unit {name}.",
+    "unlink": "Remove link",
+    "description": "What happened",
+    "descriptionHint": "What happened, who found it, and the immediate containment.",
+    "descriptionRequired": "Describe what happened.",
+    "submit": "Open incident",
+    "opened": "Incident opened",
+    "autoHeld": "The linked unit was placed on hold automatically."
+  },
+  "placeHold": {
+    "open": "Place a hold",
+    "title": "Place a unit on hold",
+    "description": "A hold stops moving, deriving, changing stage, shipping and destroying the unit until an administrator releases it.",
+    "unit": "Unit",
+    "unitHint": "Search by unit name. Units already on hold or out of inventory are not listed.",
+    "unitRequired": "Choose the unit to hold.",
+    "chosen": "Unit {name} will be held.",
+    "change": "Change unit",
+    "kind": "Kind of hold",
+    "kindHint": "Quarantine is for suspected contamination or disease.",
+    "reason": "Reason",
+    "reasonHint": "At least {count} characters. This is kept in the audit trail.",
+    "reasonShort": "Explain the reason in at least {count} characters.",
+    "cancel": "Cancel",
+    "submit": "Place hold",
+    "placed": "{name} was placed on hold"
+  },
+  "updateIncident": {
+    "open": "Update",
+    "ariaLabel": "Update the incident {title}",
+    "title": "Update the incident",
+    "status": "Status",
+    "resolution": "Resolution",
+    "resolutionHint": "Required to close an incident, at least {count} characters.",
+    "resolutionShort": "Describe the resolution in at least {count} characters.",
+    "cancel": "Cancel",
+    "submit": "Save",
+    "done": "Incident updated"
+  }
+}

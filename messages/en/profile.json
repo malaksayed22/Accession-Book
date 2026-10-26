@@ -1,0 +1,82 @@
+{
+  "pageTitle": "Profile",
+  "title": "Profile",
+  "subtitle": "Your account, your access and your security, in one place.",
+  "accessLevel": "Access level",
+  "username": "Username",
+  "prefix": "Experiment code prefix",
+  "prefixPlaceholder": "e.g. DUA",
+  "prefixHelp": "2–4 letters used for new experiment codes (like {example}1).",
+  "changePassword": "Change password (optional)",
+  "newPassword": "New password",
+  "confirmNewPassword": "Confirm new password",
+  "passwordRules": "At least {min} characters, and it must not contain your username.",
+  "currentPassword": "Current password",
+  "currentPasswordPlaceholder": "Required to save any changes",
+  "save": "Save changes",
+  "saving": "Saving…",
+  "saved": "Profile updated",
+  "unchanged": "No changes — the profile is already up to date",
+  "mismatch": "The new passwords do not match",
+  "needCurrent": "Enter your current password to save changes",
+  "hero": {
+    "experiments": "Experiments",
+    "lastSignIn": "Last sign-in",
+    "memberSince": "Member since",
+    "never": "Not yet"
+  },
+  "sections": {
+    "personal": {
+      "title": "Personal details",
+      "description": "Your name as other members see it, and the letters used at the start of the experiment codes you create."
+    },
+    "password": {
+      "title": "Password",
+      "description": "Leave both fields empty to keep your current password."
+    },
+    "confirm": {
+      "title": "Confirm it’s you",
+      "description": "Enter your current password to save any change on this page."
+    }
+  },
+  "account": {
+    "title": "Account",
+    "access": "Access level",
+    "status": "Status",
+    "passwordChanged": "Password changed",
+    "twoStep": "Two-step verification",
+    "on": "On",
+    "off": "Off"
+  },
+  "experiments": {
+    "title": "My experiments",
+    "description": "Experiments you lead or take part in.",
+    "empty": "You are not part of any experiment yet.",
+    "units": "{count, plural, one {# unit} other {# units}}"
+  },
+  "activity": {
+    "title": "Your recent activity",
+    "description": "The latest entries you made in the audit trail.",
+    "empty": "Nothing recorded yet."
+  },
+  "security": {
+    "title": "Security",
+    "mfaOn": "Two-step verification is on.",
+    "mfaRequiredForRole": "It is required for your role and cannot be turned off.",
+    "mfaOff": "Add a second step at sign-in with an authenticator app.",
+    "setUp": "Set up two-step verification",
+    "turnOffStart": "Turn off…",
+    "turnOff": "Turn off two-step verification",
+    "currentPassword": "Current password",
+    "code": "Verification or recovery code",
+    "sessionsTitle": "Active sessions",
+    "thisDevice": "This device",
+    "unknownDevice": "Unknown device",
+    "unknownAddress": "unknown address",
+    "endSession": "End",
+    "description": "Protect your account with a second step at sign-in, and review where you are signed in.",
+    "statusOn": "On",
+    "statusOff": "Off",
+    "sessionsDescription": "Devices signed in to your account. End any you do not recognise."
+  }
+}
