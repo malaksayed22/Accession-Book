@@ -78,11 +78,10 @@ export function LifecycleTrack({ children }: { children?: ReactNode }) {
   }, []);
 
   return (
-    <div
-      ref={frameRef}
-      className="relative flex flex-col justify-center overflow-hidden"
-    >
-      {children ? <div className="mx-auto mb-8 w-full max-w-6xl px-4 sm:px-6">{children}</div> : null}
+    <div ref={frameRef} className="relative flex flex-col justify-center overflow-hidden">
+      {children ? (
+        <div className="mx-auto mb-8 w-full max-w-6xl px-4 sm:px-6">{children}</div>
+      ) : null}
 
       <p className="mb-4 flex flex-wrap items-center gap-x-6 gap-y-2 px-4 text-sm sm:px-6 md:mx-auto md:w-full md:max-w-6xl">
         <span className="inline-flex items-center gap-2 text-fg-secondary">

@@ -199,7 +199,9 @@ export default async function HomePage({ params }: Props) {
             >
               {t("cta.title")}
             </h2>
-            <p className="mx-auto mt-6 max-w-xl text-base text-fg-secondary sm:text-lg">{t("cta.body")}</p>
+            <p className="mx-auto mt-6 max-w-xl text-base text-fg-secondary sm:text-lg">
+              {t("cta.body")}
+            </p>
             <div className="mt-10 flex justify-center">
               <Magnetic className="max-sm:w-full max-sm:max-w-sm">
                 <PillLink href={entryHref} size="lg" className="max-sm:w-full">

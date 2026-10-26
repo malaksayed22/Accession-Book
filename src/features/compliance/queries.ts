@@ -37,7 +37,12 @@ const monthStatus = (offset: number): CtlsMonthStatus => {
   const plants = UNITS.filter((u) => u.type === "PLANT" || u.type === "FLOWER").length;
   const cultures = UNITS.filter((u) => u.type === "CULTURE").length;
   const seeds = UNITS.filter((u) => u.type === "SEEDLOT").length;
-  const line = (lineId: ReconciliationLine["lineId"], closing: number, additions: number, reductions: number): ReconciliationLine => ({
+  const line = (
+    lineId: ReconciliationLine["lineId"],
+    closing: number,
+    additions: number,
+    reductions: number
+  ): ReconciliationLine => ({
     lineId,
     opening: closing - additions + reductions,
     additions,
@@ -58,11 +63,17 @@ const monthStatus = (offset: number): CtlsMonthStatus => {
     activeAtClose: lines.reduce((sum, l) => sum + l.closing, 0),
     newUnits: lines.reduce((sum, l) => sum + l.additions, 0),
     destructions: 2,
-    shipments: SHIPMENTS.filter((s) => s.direction === "OUTBOUND" && s.status !== "CANCELLED").length,
+    shipments: SHIPMENTS.filter((s) => s.direction === "OUTBOUND" && s.status !== "CANCELLED")
+      .length,
   };
 };
 
-const offender = (id: number, label: string, key: Offender["detail"]["key"], params: Record<string, string | number>): Offender => ({
+const offender = (
+  id: number,
+  label: string,
+  key: Offender["detail"]["key"],
+  params: Record<string, string | number>
+): Offender => ({
   id,
   label,
   href: `/inventory/units/${id}`,
@@ -72,14 +83,27 @@ const offender = (id: number, label: string, key: Offender["detail"]["key"], par
 export async function getComplianceConsole(_user: SessionUser) {
   const open: Partial<Record<FindingId, Offender[]>> = {
     "transfers-scanned": [
-      { id: 2, label: "BD-002", href: "/inventory/units/2", detail: { key: "movedWithoutScan", params: { location: "Flower Room 1" } } },
+      {
+        id: 2,
+        label: "BD-002",
+        href: "/inventory/units/2",
+        detail: { key: "movedWithoutScan", params: { location: "Flower Room 1" } },
+      },
     ],
-    "quality-holds": HOLDS.map((h) => offender(h.unitId, unitById(h.unitId)!.name, "hold", { kind: h.kind, reason: h.reason })),
+    "quality-holds": HOLDS.map((h) =>
+      offender(h.unitId, unitById(h.unitId)!.name, "hold", { kind: h.kind, reason: h.reason })
+    ),
     "failed-tests": TESTS.filter((t) => t.verdict === "FAIL").map((t) =>
-      offender(t.unitId, unitById(t.unitId)!.name, "testFailed", { panel: t.panel, analyte: t.analyte })
+      offender(t.unitId, unitById(t.unitId)!.name, "testFailed", {
+        panel: t.panel,
+        analyte: t.analyte,
+      })
     ),
     "open-incidents": INCIDENTS.filter((i) => i.status !== "CLOSED").map((i) =>
-      offender(i.unitId, unitById(i.unitId)!.name, "incident", { severity: i.severity, title: i.title })
+      offender(i.unitId, unitById(i.unitId)!.name, "incident", {
+        severity: i.severity,
+        title: i.title,
+      })
     ),
     "experiment-attribution": UNITS.filter((u) => u.experimentId === null).map((u) =>
       offender(u.id, u.name, "noExperiment", {})

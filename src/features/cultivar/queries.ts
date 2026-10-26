@@ -16,6 +16,7 @@ import {
   UNITS,
   type MockUnit,
 } from "@/features/mock/data";
+import type { TestPanel } from "@/generated/prisma/enums";
 
 export const CULTIVAR_LIST_SORTS = ["name", "units", "thc", "updated"] as const;
 export type CultivarListSort = (typeof CULTIVAR_LIST_SORTS)[number];
@@ -32,7 +33,13 @@ export type CultivarListRow = {
   targetCbd: number | null;
   comment: string | null;
   updatedAt: Date;
-  stats: { totalUnits: number; activeUnits: number; onHold: number; experiments: number; locations: number };
+  stats: {
+    totalUnits: number;
+    activeUnits: number;
+    onHold: number;
+    experiments: number;
+    locations: number;
+  };
 };
 
 const statsFor = (cultivarId: number) => {
@@ -97,7 +104,12 @@ export type CultivarUnitRow = {
 export async function listCultivarUnits(
   _user: SessionUser,
   cultivarId: number,
-  f: { sort: (typeof CULTIVAR_UNIT_SORTS)[number]; order: "asc" | "desc"; page: number; limit: number }
+  f: {
+    sort: (typeof CULTIVAR_UNIT_SORTS)[number];
+    order: "asc" | "desc";
+    page: number;
+    limit: number;
+  }
 ) {
   let rows: CultivarUnitRow[] = UNITS.filter((u) => u.cultivarId === cultivarId).map((u) => {
     const e = experimentById(u.experimentId);
@@ -133,7 +145,7 @@ export type CultivarTestRow = {
   id: number;
   unit: { id: number; name: string };
   lab: { id: number; name: string } | null;
-  panel: string;
+  panel: TestPanel;
   analyte: string;
   value: number | null;
   uom: string | null;
@@ -142,14 +154,23 @@ export type CultivarTestRow = {
 };
 
 export async function listCultivarIncidents(_user: SessionUser, cultivarId: number) {
-  const rows: CultivarIncidentRow[] = INCIDENTS.filter((i) => unitById(i.unitId)?.cultivarId === cultivarId).map(
-    (i) => ({ id: i.id, title: i.title, unit: unitById(i.unitId) ? { id: i.unitId, name: unitById(i.unitId)!.name } : null, severity: i.severity, status: i.status, createdAt: daysAgo(i.createdDaysAgo) })
-  );
+  const rows: CultivarIncidentRow[] = INCIDENTS.filter(
+    (i) => unitById(i.unitId)?.cultivarId === cultivarId
+  ).map((i) => ({
+    id: i.id,
+    title: i.title,
+    unit: unitById(i.unitId) ? { id: i.unitId, name: unitById(i.unitId)!.name } : null,
+    severity: i.severity,
+    status: i.status,
+    createdAt: daysAgo(i.createdDaysAgo),
+  }));
   return { rows, total: rows.length };
 }
 
 export async function listCultivarTests(_user: SessionUser, cultivarId: number) {
-  const rows: CultivarTestRow[] = TESTS.filter((t) => unitById(t.unitId)?.cultivarId === cultivarId).map((t) => ({
+  const rows: CultivarTestRow[] = TESTS.filter(
+    (t) => unitById(t.unitId)?.cultivarId === cultivarId
+  ).map((t) => ({
     id: t.id,
     unit: { id: t.unitId, name: unitById(t.unitId)!.name },
     lab: organizationById(t.labId) ? { id: t.labId, name: organizationById(t.labId)!.name } : null,

@@ -11,7 +11,28 @@ import {
   UNITS,
 } from "@/features/mock/data";
 import { recentAuditEntries } from "@/features/audit/queries";
+import type { UnitStateKind } from "@/generated/prisma/enums";
 import type { AttentionKind } from "./attention";
+
+type RecentActivity =
+  | { kind: "audit"; entries: Awaited<ReturnType<typeof recentAuditEntries>> }
+  | {
+      kind: "events";
+      events: Array<{
+        id: number;
+        kind: UnitStateKind;
+        unitId: number;
+        unitName: string;
+        actorName: string;
+        locationName: string | null;
+        recordedAt: Date;
+      }>;
+    };
+
+const recentActivity = async (): Promise<RecentActivity> => ({
+  kind: "audit",
+  entries: await recentAuditEntries(6),
+});
 
 export const ENDING_SOON_DAYS = 14;
 /** How many days the activity chart covers, today included. */
@@ -94,10 +115,7 @@ export async function getDashboard(_user: SessionUser) {
       endDate: e.endDate,
       activeUnits: active.filter((u) => u.experimentId === e.id).length,
     })),
-    recent: {
-      kind: "audit" as const,
-      entries: await recentAuditEntries(6),
-    },
+    recent: await recentActivity(),
     inventory: {
       total: active.length,
       byType: count((u) => u.type),

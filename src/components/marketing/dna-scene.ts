@@ -70,7 +70,14 @@ function glowSprite(): THREE.CanvasTexture {
   canvas.width = canvas.height = size;
   const context = canvas.getContext("2d");
   if (context) {
-    const gradient = context.createRadialGradient(size / 2, size / 2, 0, size / 2, size / 2, size / 2);
+    const gradient = context.createRadialGradient(
+      size / 2,
+      size / 2,
+      0,
+      size / 2,
+      size / 2,
+      size / 2
+    );
     gradient.addColorStop(0, "rgba(255,255,255,1)");
     gradient.addColorStop(0.35, "rgba(255,255,255,0.55)");
     gradient.addColorStop(1, "rgba(255,255,255,0)");
@@ -249,7 +256,9 @@ export class DnaScene {
     this.forEachVertex(pivot, (point) => points.push(point.clone()));
     if (points.length === 0) return;
 
-    const mean = points.reduce((sum, point) => sum.add(point), new THREE.Vector3()).divideScalar(points.length);
+    const mean = points
+      .reduce((sum, point) => sum.add(point), new THREE.Vector3())
+      .divideScalar(points.length);
     const axis = principalAxis(points, mean);
     const upright = new THREE.Quaternion().setFromUnitVectors(axis, new THREE.Vector3(0, 1, 0));
 
@@ -264,7 +273,10 @@ export class DnaScene {
 
     const scale = MODEL_HEIGHT / (high - low);
     // Rotate and scale about the mean, then lift so the helix is centred on the origin.
-    const shift = mean.clone().applyQuaternion(upright).add(new THREE.Vector3(0, (low + high) / 2, 0));
+    const shift = mean
+      .clone()
+      .applyQuaternion(upright)
+      .add(new THREE.Vector3(0, (low + high) / 2, 0));
     pivot.quaternion.copy(upright);
     pivot.scale.setScalar(scale);
     pivot.position.copy(shift).multiplyScalar(-scale);
@@ -302,7 +314,10 @@ export class DnaScene {
    * Visits every vertex under `root` in the spinner's own coordinate space. Using world space here
    * would bake the rig's current zoom pose into the measurements.
    */
-  private forEachVertex(root: THREE.Object3D, visit: (point: THREE.Vector3, index: number) => void) {
+  private forEachVertex(
+    root: THREE.Object3D,
+    visit: (point: THREE.Vector3, index: number) => void
+  ) {
     this.scene.updateMatrixWorld(true);
     const intoSpinner = this.spinner.matrixWorld.clone().invert();
     const point = new THREE.Vector3();
@@ -330,7 +345,8 @@ export class DnaScene {
     this.rig.position.y = lerp(this.startOffset.y, 0, zoom);
     this.rig.rotation.z = lerp(0.62, 0.1, zoom);
     this.rig.rotation.x = this.pointer.easedY * 0.12;
-    this.spinner.rotation.y = this.spin + this.shownZoom * Math.PI * 2.4 + this.pointer.easedX * 0.35;
+    this.spinner.rotation.y =
+      this.spin + this.shownZoom * Math.PI * 2.4 + this.pointer.easedX * 0.35;
 
     this.camera.position.set(0, 0, lerp(13.5, 10, zoom) * this.framing);
     this.camera.lookAt(0, 0, 0);

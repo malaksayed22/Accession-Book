@@ -30,10 +30,6 @@ const nextConfig: NextConfig = {
   // Do not advertise the framework.
   poweredByHeader: false,
   serverExternalPackages: ["pg", "@prisma/adapter-pg", "pino"],
-  // The mock server layer (src/server, src/features/*/queries.ts, src/generated) is loosely typed,
-  // so strict checks on the UI code report mismatches that the real server types resolve. Keep
-  // the deploy unblocked; `npm run typecheck` still reports them.
-  typescript: { ignoreBuildErrors: true },
   async redirects() {
     return Object.entries(MOVED_PAGES).flatMap(([from, to]) => [
       {

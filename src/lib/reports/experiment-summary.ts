@@ -65,8 +65,12 @@ export async function generateExperimentSummary(filters: ReportFilters): Promise
       seedLots: activeOfType("SEEDLOT"),
       flowers: activeOfType("FLOWER"),
       team:
-        exp.members.map((m) => `${m.user.name}${m.role === "LEAD" ? " (lead)" : ""}`).join(", ") ||
-        "—",
+        exp.members
+          .map(
+            (m: { role: string; user: { name: string } }) =>
+              `${m.user.name}${m.role === "LEAD" ? " (lead)" : ""}`
+          )
+          .join(", ") || "—",
       subExperiments: exp._count.subExperiments,
     };
   });

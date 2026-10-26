@@ -154,7 +154,10 @@ export default async function CultivarDetailPage({
       header: t("detail.incidents.columns.title"),
       rowHeader: true,
       cell: (i) => (
-        <Link href="/quality?view=incidents" className="font-medium text-accent-text hover:underline">
+        <Link
+          href="/quality?view=incidents"
+          className="font-medium text-accent-text hover:underline"
+        >
           {i.title}
         </Link>
       ),

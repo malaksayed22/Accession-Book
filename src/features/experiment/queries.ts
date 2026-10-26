@@ -23,6 +23,7 @@ import {
   type MockUnit,
 } from "@/features/mock/data";
 import type { ExperimentStatus } from "./dates";
+import { suggestedKindForUnitType, type IntakeKindId } from "@/lib/experiment-intake";
 
 export const EXPERIMENT_LIST_SORTS = ["date", "end", "name", "code", "units"] as const;
 export const EXPERIMENT_LIST_STATUSES = ["running", "completed"] as const;
@@ -253,12 +254,12 @@ export async function getExperimentDetail(user: SessionUser, id: number) {
     })),
     provenance: [
       {
-        sourceType: "RECEIVED",
+        sourceType: "RECEIVED" as const,
         units: Math.max(1, units.length - 2),
         provider: organizationById(1) && { id: 1, name: ORGANIZATIONS[0]!.name },
         description: "Clones from the spring intake batch.",
       },
-      { sourceType: "INTERNAL", units: 2, provider: null, description: null },
+      { sourceType: "INTERNAL" as const, units: 2, provider: null, description: null },
     ],
     receipts: receipts.map((s) => ({
       id: s.id,
@@ -313,7 +314,7 @@ export type WizardOptions = {
   codePrefix: string;
   suggestedCode: string;
   parent: { id: number; ecode: string; name: string } | null;
-  parentProblem: "notFound" | "forbidden" | "completed" | null;
+  parentProblem: "missing" | "forbidden" | null;
   parentOptions: Array<{ id: number; ecode: string; name: string }>;
   sourceUnit: {
     id: number;
@@ -323,14 +324,14 @@ export type WizardOptions = {
     locationId: number | null;
     locationName: string | null;
     growthStage: string | null;
-    suggestedKind: string;
+    suggestedKind: IntakeKindId;
     providerMode: "INTERNAL" | "EXTERNAL";
     providerOrganizationId: number | null;
     providerOrganizationName: string | null;
     sourceDescription: string | null;
   } | null;
   cultivars: Array<{ id: number; name: string }>;
-  locations: Array<{ id: number; name: string; capacity: number | null; units: number }>;
+  locations: Array<{ id: number; name: string; capacity: number | null; occupancy: number }>;
   organizations: Array<{ id: number; name: string }>;
 };
 
@@ -360,7 +361,7 @@ export async function getExperimentWizardOptions(
           locationId: unit.locationId,
           locationName: locationById(unit.locationId)?.name ?? null,
           growthStage: unit.stage,
-          suggestedKind: "CLONE",
+          suggestedKind: suggestedKindForUnitType(unit.type),
           providerMode: "INTERNAL",
           providerOrganizationId: null,
           providerOrganizationName: null,
@@ -372,7 +373,7 @@ export async function getExperimentWizardOptions(
       id: l.id,
       name: l.name,
       capacity: l.capacity,
-      units: UNITS.filter((u) => u.locationId === l.id && isActiveUnit(u)).length,
+      occupancy: UNITS.filter((u) => u.locationId === l.id && isActiveUnit(u)).length,
     })),
     organizations: ORGANIZATIONS.map((o) => ({ id: o.id, name: o.name })),
   };

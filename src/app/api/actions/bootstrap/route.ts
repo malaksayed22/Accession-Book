@@ -23,7 +23,8 @@ export async function GET(request: Request) {
           type: u.type,
           status: u.status,
           canEdit: u.status !== "shipped" && u.status !== "destroyed",
-          holdKind: u.status === "quarantine" ? "QUARANTINE" : u.status === "on-hold" ? "HOLD" : null,
+          holdKind:
+            u.status === "quarantine" ? "QUARANTINE" : u.status === "on-hold" ? "HOLD" : null,
           locationId: u.locationId,
           growthStage: u.stage,
           experimentId: u.experimentId,
@@ -41,6 +42,9 @@ export async function GET(request: Request) {
       occupancy: UNITS.filter((x) => x.locationId === l.id && isActiveUnit(x)).length,
     })),
     organizations: ORGANIZATIONS.map((o) => ({ id: o.id, name: o.name })),
-    witnesses: MEMBERS.filter((m) => m.status === "active").map((m) => ({ id: m.id, name: m.name })),
+    witnesses: MEMBERS.filter((m) => m.status === "active").map((m) => ({
+      id: m.id,
+      name: m.name,
+    })),
   });
 }

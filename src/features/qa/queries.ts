@@ -19,6 +19,7 @@ import {
   type MockUnit,
   type MockVerdict,
 } from "@/features/mock/data";
+import type { TestPanel } from "@/generated/prisma/enums";
 
 export const QA_VIEWS = ["overview", "holds", "tests", "incidents"] as const;
 export type QaView = (typeof QA_VIEWS)[number];
@@ -56,7 +57,7 @@ export type QaHoldRow = {
 export type QaTestRow = {
   id: number;
   unit: UnitRef;
-  panel: string;
+  panel: TestPanel;
   analyte: string;
   value: number | null;
   uom: string | null;

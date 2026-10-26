@@ -18,12 +18,17 @@ import {
   UNITS,
   AUDIT_ACTIONS,
 } from "@/features/mock/data";
+import type { TestPanel } from "@/generated/prisma/enums";
 
 export const ORGANIZATION_LIST_SORTS = ["name", "country", "units", "shipments"] as const;
 export const ORGANIZATION_RELATIONS = ["supplier", "recipient", "lab"] as const;
 export const ORGANIZATION_SECTION_SIZE = 5;
 
-const REL: Record<string, OrganizationRelation> = { SUPPLIER: "supplier", CUSTOMER: "recipient", LAB: "lab" };
+const REL: Record<string, OrganizationRelation> = {
+  SUPPLIER: "supplier",
+  CUSTOMER: "recipient",
+  LAB: "lab",
+};
 
 export type OrganizationListRow = {
   id: number;
@@ -44,8 +49,11 @@ const toRow = (o: (typeof ORGANIZATIONS)[number]): OrganizationListRow => ({
   licenceNumber: o.licence,
   relations: [REL[o.relation]!],
   suppliedUnits: o.id === 1 ? UNITS.filter((u) => u.type === "SEEDLOT").length : 0,
-  inboundShipments: SHIPMENTS.filter((s) => s.organizationId === o.id && s.direction === "INBOUND").length,
-  outboundShipments: SHIPMENTS.filter((s) => s.organizationId === o.id && s.direction === "OUTBOUND").length,
+  inboundShipments: SHIPMENTS.filter((s) => s.organizationId === o.id && s.direction === "INBOUND")
+    .length,
+  outboundShipments: SHIPMENTS.filter(
+    (s) => s.organizationId === o.id && s.direction === "OUTBOUND"
+  ).length,
   labResults: o.id === 2 ? TESTS.length : 0,
 });
 
@@ -100,7 +108,7 @@ export type OrganizationUnitRow = {
 export type OrganizationTestRow = {
   id: number;
   unit: { id: number; name: string };
-  panel: string;
+  panel: TestPanel;
   analyte: string;
   value: number | null;
   uom: string | null;
@@ -108,7 +116,13 @@ export type OrganizationTestRow = {
   relation: "performed" | "supplied";
   testedAt: Date;
 };
-export type OrganizationAuditRow = { id: number; summary: string; userId: number; userName: string; createdAt: Date };
+export type OrganizationAuditRow = {
+  id: number;
+  summary: string;
+  userId: number;
+  userName: string;
+  createdAt: Date;
+};
 
 export async function getOrganizationDetail(
   user: SessionUser,
@@ -137,14 +151,21 @@ export async function getOrganizationDetail(
     for (const s of SHIPMENTS.filter((x) => x.organizationId === id && x.direction === direction)) {
       const d = await getShipmentDetail(user, s.id);
       for (const i of d?.items ?? []) {
-        items.push({ materialType: i.materialType, unitCount: i.unitCount, weightGrams: i.weightGrams, moisture: i.moisture } as never);
+        items.push({
+          materialType: i.materialType,
+          unitCount: i.unitCount,
+          weightGrams: i.weightGrams,
+          moisture: i.moisture,
+        } as never);
       }
     }
     return sumMaterials(items);
   };
   const inbound = shipmentRows("INBOUND");
   const outbound = shipmentRows("OUTBOUND");
-  const units: OrganizationUnitRow[] = (id === 1 ? UNITS.filter((u) => u.type === "SEEDLOT") : []).map((u) => {
+  const units: OrganizationUnitRow[] = (
+    id === 1 ? UNITS.filter((u) => u.type === "SEEDLOT") : []
+  ).map((u) => {
     const c = cultivarById(u.cultivarId);
     const e = experimentById(u.experimentId);
     return {
@@ -168,7 +189,13 @@ export async function getOrganizationDetail(
   }));
   const activity: OrganizationAuditRow[] = AUDIT_ACTIONS.filter(
     (a) => a.entityType === "organization" && a.entityId === id
-  ).map((a, index) => ({ id: index + 1, summary: a.summary, userId: a.actor, userName: memberById(a.actor).name, createdAt: daysAgo(a.daysAgo) }));
+  ).map((a, index) => ({
+    id: index + 1,
+    summary: a.summary,
+    userId: a.actor,
+    userName: memberById(a.actor).name,
+    createdAt: daysAgo(a.daysAgo),
+  }));
 
   return {
     organization: {

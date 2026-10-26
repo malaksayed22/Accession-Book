@@ -56,7 +56,7 @@ function itemsFor(s: MockShipment) {
       id: s.id * 100 + uid,
       description: `${u.name}${u.dryWeight ? ` (dry)` : ""}`,
       comment: null as string | null,
-      materialType: materialType as string,
+      materialType,
       cultivar: cultivarById(u.cultivarId)
         ? { id: u.cultivarId!, name: cultivarById(u.cultivarId)!.name }
         : null,

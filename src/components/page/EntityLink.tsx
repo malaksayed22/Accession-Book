@@ -10,13 +10,7 @@ import { cn } from "@/lib/utils";
  * callers do not need a ternary. Server and client friendly.
  */
 export type EntityKind =
-  | "unit"
-  | "experiment"
-  | "cultivar"
-  | "organization"
-  | "member"
-  | "shipment"
-  | "location";
+  "unit" | "experiment" | "cultivar" | "organization" | "member" | "shipment" | "location";
 
 const HREF: Record<EntityKind, (id: number) => string> = {
   unit: (id) => `/inventory/units/${id}`,

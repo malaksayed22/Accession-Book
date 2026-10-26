@@ -1,5 +1,15 @@
 import type { SessionUser } from "@/lib/auth";
-import { AUDIT_ACTIONS, daysAgo, EXPERIMENTS, matches, memberById, MEMBERS, slicePage, sortBy, UNITS } from "@/features/mock/data";
+import {
+  AUDIT_ACTIONS,
+  daysAgo,
+  EXPERIMENTS,
+  matches,
+  memberById,
+  MEMBERS,
+  slicePage,
+  sortBy,
+  UNITS,
+} from "@/features/mock/data";
 
 export const MEMBER_LIST_SORTS = ["name", "access", "experiments"] as const;
 export const MEMBER_LIST_STATUSES = ["active", "invited", "deactivated"] as const;

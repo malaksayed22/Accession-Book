@@ -1,5 +1,17 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-// MOCK: every model call resolves to "nothing found".
+// MOCK: every model call resolves to "nothing found". The shape mirrors the real client closely
+// enough that callbacks over query results are contextually typed rather than implicitly `any`.
+type ModelStub = {
+  findMany: (...args: any[]) => Promise<any[]>;
+  findUnique: (...args: any[]) => Promise<any>;
+};
+type ModelName =
+  "auditLog" | "biologicalUnit" | "experiment" | "experimentMember" | "location" | "user";
+type PrismaStub = Record<ModelName, ModelStub> & {
+  $queryRaw: <T = unknown>(...args: any[]) => Promise<T>;
+  $transaction: (...args: any[]) => Promise<any>;
+};
+
 const model = new Proxy(
   {},
   {
@@ -11,7 +23,7 @@ const model = new Proxy(
           : [],
   }
 );
-export const prisma: any = new Proxy(
+export const prisma = new Proxy(
   {},
   { get: (_t, name) => (name === "$queryRaw" || name === "$transaction" ? async () => [] : model) }
-);
+) as PrismaStub;

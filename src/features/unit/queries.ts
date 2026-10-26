@@ -33,7 +33,6 @@ import {
   memberById,
   MEMBERS,
   organizationById,
-  SHIPMENTS,
   slicePage,
   sortBy,
   TESTS,
@@ -41,6 +40,12 @@ import {
   UNITS,
   type MockUnit,
 } from "@/features/mock/data";
+import type {
+  ActivityType,
+  AttachmentCategory,
+  SourceType,
+  TestPanel,
+} from "@/generated/prisma/enums";
 
 export const UNIT_LIST_SORTS = ["name", "type", "cultivar", "location", "date"] as const;
 export const UNIT_LIST_STATUSES = ["active", "hold", "shipped", "destroyed"] as const;
@@ -321,13 +326,13 @@ export type UnitProfile = {
   } | null;
   weights: { humid: number | null; dry: number | null; isHarvested: boolean };
   source: {
-    type: string | null;
+    type: SourceType | null;
     provider: { id: number; name: string; country: string | null } | null;
     receivedAt: Date | null;
     receptionNote: string | null;
     description: string | null;
   };
-  parent: { id: number; name: string } | null;
+  parent: { id: number; name: string; note: string | null } | null;
   lineage: {
     mother: { id: number; name: string } | null;
     generation: number;
@@ -439,7 +444,7 @@ export async function getUnitProfile(user: SessionUser, id: number): Promise<Uni
       receptionNote: u.type === "SEEDLOT" ? "Sealed on arrival; manifest MAN-88341 matched." : null,
       description: parent ? `Cutting taken from ${parent.name}.` : null,
     },
-    parent: parent ? { id: parent.id, name: parent.name } : null,
+    parent: parent ? { id: parent.id, name: parent.name, note: null } : null,
     lineage: (() => {
       const ancestry: Array<{ id: number; name: string }> = [];
       for (let cur = parent; cur; cur = cur.parentId ? unitById(cur.parentId) : null)
@@ -500,7 +505,7 @@ export async function getUnitProfile(user: SessionUser, id: number): Promise<Uni
 
 export type UnitTestView = {
   id: number;
-  panel: string;
+  panel: TestPanel;
   analyte: string;
   value: number | null;
   uom: string | null;
@@ -596,16 +601,16 @@ export type UnitAttachmentView = {
   id: number;
   label: string;
   fileName: string;
-  category: string;
+  category: AttachmentCategory;
   sizeBytes: number;
-  sha: string;
+  sha256: string;
   uploadedBy: string;
   uploadedById: number;
   uploadedAt: Date;
 };
 export type UnitActivityView = {
   id: number;
-  type: string;
+  type: ActivityType;
   title: string;
   details: string | null;
   recordedBy: string;
@@ -625,7 +630,7 @@ export async function getUnitDocuments(_user: SessionUser, unitId: number): Prom
         fileName: `${u.name}-week6.jpg`,
         category: "PHOTO",
         sizeBytes: 2_483_112,
-        sha: "9f2b6c1d7a4e8b30c5d1e9a7f4b2c8d6e0a3b5c7d9f1e2a4b6c8d0e2f4a6b8c0",
+        sha256: "9f2b6c1d7a4e8b30c5d1e9a7f4b2c8d6e0a3b5c7d9f1e2a4b6c8d0e2f4a6b8c0",
         uploadedBy: memberById(2).name,
         uploadedById: 2,
         uploadedAt: daysAgo(6),

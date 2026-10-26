@@ -247,8 +247,16 @@
   z-index: -1;
   pointer-events: none;
   background:
-    radial-gradient(60% 70% at 100% 0%, color-mix(in srgb, var(--color-series-1) 16%, transparent), transparent 70%),
-    radial-gradient(50% 60% at 0% 100%, color-mix(in srgb, var(--color-series-6) 9%, transparent), transparent 70%);
+    radial-gradient(
+      60% 70% at 100% 0%,
+      color-mix(in srgb, var(--color-series-1) 16%, transparent),
+      transparent 70%
+    ),
+    radial-gradient(
+      50% 60% at 0% 100%,
+      color-mix(in srgb, var(--color-series-6) 9%, transparent),
+      transparent 70%
+    );
 }
 /* Loading placeholder with a slow light sweep. */
 @keyframes shimmer {

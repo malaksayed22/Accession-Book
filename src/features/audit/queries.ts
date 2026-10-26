@@ -1,5 +1,12 @@
 import type { SessionUser } from "@/lib/auth";
-import { AUDIT_ACTIONS, daysAgo, matches, memberById, MEMBERS, slicePage } from "@/features/mock/data";
+import {
+  AUDIT_ACTIONS,
+  daysAgo,
+  matches,
+  memberById,
+  MEMBERS,
+  slicePage,
+} from "@/features/mock/data";
 
 export type AuditChange = { field: string; from: string | null; to: string | null };
 
@@ -23,7 +30,10 @@ export type AuditEntryRow = {
 export type ChainStatus = {
   entries: number;
   verifiedAt: Date;
-  firstBroken: { seq: number; kind: "hash" | "gap" | "missing" } | null;
+  firstBroken: {
+    seq: number;
+    kind: "sequenceGap" | "linkBroken" | "contentAltered" | "unknown";
+  } | null;
 };
 
 const ALL: AuditEntryRow[] = AUDIT_ACTIONS.map((a, index) => {
